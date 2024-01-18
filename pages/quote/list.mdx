@@ -1,0 +1,50 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get All Quote
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/quote</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+[
+  {
+    "id": 1,
+    "author_id": 13,
+    "quote": "Be yourself; everyone else is already taken.",
+    "book_authors": {
+      "id": 13,
+      "name": "Oscar Wilde",
+      "slug": "oscar-wilde"
+    }
+  },
+  {
+    "id": 2,
+    "author_id": 217,
+    "quote": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    "book_authors": {
+      "id": 217,
+      "name": "Albert Einstein",
+      "slug": "albert-einstein"
+    }
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

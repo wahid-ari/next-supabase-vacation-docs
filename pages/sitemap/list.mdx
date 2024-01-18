@@ -1,0 +1,62 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get Sitemap
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/sitemap</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "authors": [
+    {
+      "slug": "suzanne-collins"
+    },
+    {
+      "slug": "jk-rowling"
+    }
+  ],
+  "books": [
+    {
+      "slug": "the-hunger-games"
+    },
+    {
+      "slug": "harry-potter-and-the-order-of-the-phoenix"
+    }
+  ],
+  "genres": [
+    {
+      "slug": "art"
+    },
+    {
+      "slug": "biography"
+    }
+  ],
+  "tags": [
+    {
+      "slug": "love"
+    },
+    {
+      "slug": "life"
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

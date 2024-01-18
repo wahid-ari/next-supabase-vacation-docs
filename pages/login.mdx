@@ -1,0 +1,104 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+import CodeGroup from '@/components/CodeGroup';
+
+# Login
+
+Registered users can login using the API described below. The login operation requires two properties: one marked as user identity and the second is password.
+
+**Method :** <Badge>POST</Badge>
+
+**URL :** <Badge variant="dark">/api/login</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "username": "username",
+  "password": "secret"
+}
+```
+
+**Request :**
+
+<CodeGroup items={["Javascript", "Python"]}>
+	<CodeGroup.Item>
+	```jsx copy
+	var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+"username": "username",
+"password": "secret"
+});
+
+var requestOptions = {
+method: 'POST',
+headers: myHeaders,
+body: raw,
+redirect: 'follow'
+};
+
+fetch("/api/login", requestOptions)
+.then(response => response.text())
+.then(result => console.log(result))
+.catch(error => console.log('error', error));
+`
+	</CodeGroup.Item>
+	<CodeGroup.Item>
+	`python copy
+import http.client
+import json
+
+conn = http.client.HTTPSConnection("localhost", 3000)
+payload = json.dumps({
+"username": "username",
+"password": "secret"
+})
+headers = {
+'Content-Type': 'application/json'
+}
+conn.request("POST", "/api/login", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+
+````
+</CodeGroup.Item>
+
+</CodeGroup>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "id": 1,
+  "username": "admin",
+  "name": "Admin",
+  "type": "admin",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJBZG1pbiIsImlhdCI6MTY3MzU5MDY1NH0.z8Bc26vhWGICs78KyujSWXY5S98qoccYl9pBVWEFYBY"
+}
+````
+
+**Response :**
+
+<CodeGroup items={["422", "500"]}>
+	<CodeGroup.Item>
+	```json
+	{
+        "error_code": "422",
+        "message": "Unprocessable Content",
+        "error": "Username required",
+        "error": "Password required"
+	}
+	```
+	</CodeGroup.Item>
+	<CodeGroup.Item>
+	```json
+	{
+		"error_code": "500",
+		"message": "Internal Server Error"
+	}
+	```
+	</CodeGroup.Item>
+</CodeGroup>

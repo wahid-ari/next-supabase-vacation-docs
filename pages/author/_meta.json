@@ -1,0 +1,9 @@
+{
+  "list": "Get All Author",
+  "total": "Get Total Book & Quote by Author",
+  "detail": "Get Detail Author",
+  "seo": "Get Detail SEO Author",
+  "create": "Create Author",
+  "edit": "Update Author",
+  "delete": "Delete Author"
+}

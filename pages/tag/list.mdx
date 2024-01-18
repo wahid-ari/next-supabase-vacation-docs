@@ -1,0 +1,42 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get All Tag
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/tag</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Love",
+    "link": "https://www.goodreads.com/quotes/tag/love",
+    "created_at": "2023-05-24T07:56:22.452151+00:00"
+  },
+  {
+    "id": 2,
+    "name": "Life",
+    "link": "https://www.goodreads.com/quotes/tag/life",
+    "created_at": "2023-05-24T07:56:22.452151+00:00"
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

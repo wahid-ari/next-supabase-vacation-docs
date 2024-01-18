@@ -1,0 +1,67 @@
+import {
+  ArrowLeftOnRectangleIcon,
+  ArrowRightOnRectangleIcon,
+  BookOpenIcon,
+  BuildingLibraryIcon,
+  ChartPieIcon,
+  ChatBubbleBottomCenterTextIcon,
+  FilmIcon,
+  FlagIcon,
+  MagnifyingGlassIcon,
+  RectangleStackIcon,
+  RssIcon,
+  Squares2X2Icon,
+  SwatchIcon,
+  UserGroupIcon,
+  UsersIcon,
+} from '@heroicons/react/24/outline';
+
+import { Card, Cards } from '@/components/cards';
+
+# Introduction
+
+Welcome to MyVacation REST API documentation. From here you can easily discover all available REST APIs with the required information on how to consume it.
+
+## What is MyVacation?
+
+MyVacation is a digital information and statistics about books, authors as well as quotes, genres and other book industry professionals.
+
+![Home](../public/demo2.png)
+
+Our searchable database includes hundreds of books, authors and others.
+
+![Dashboard](../public/demo.png)
+
+## Database
+
+Import data directly from a CSV or excel spreadsheet to **Supabase**.
+
+[CSV](https://github.com/wahid-ari/next-supabase-vacation-docs/tree/master/public/supabase-csv)
+
+## Postman
+
+You can import collections or your API specifications directly into Postman.
+
+Export Collection v2.1 > [JSON](/Next-Supabase-Vacation.postman_collection.json)
+
+Export Collection v2.1 > [JSON](https://github.com/wahid-ari/next-supabase-vacation-docs/blob/master/public/Next-Supabase-Vacation.postman_collection.json) (github)
+
+Export Collection v2.1 > [JSON](https://github.com/wahid-ari/next-supabase-vacation-docs/raw/master/public/Next-Supabase-Vacation.postman_collection.json) (download)
+
+## Documentation
+
+Discover our REST API documentation
+
+<Cards>
+  <Card icon={<ArrowRightOnRectangleIcon className='h-6 w-6' />} title='Login' href='/login' />
+  <Card icon={<ArrowLeftOnRectangleIcon className='h-6 w-6' />} title='Logout' href='/logout' />
+  <Card icon={<MagnifyingGlassIcon className='h-6 w-6' />} title='Search' href='/search' />
+  <Card icon={<ChartPieIcon className='h-6 w-6' />} title='Statistics' href='/statistics' />
+  <Card icon={<Squares2X2Icon className='h-6 w-6' />} title='Dashboard' href='/dashboard' />
+  <Card icon={<RssIcon className='h-6 w-6' />} title='Sitemap' href='/sitemap' />
+  <Card icon={<BookOpenIcon className='h-6 w-6' />} title='Book' href='/book' />
+  <Card icon={<UserGroupIcon className='h-6 w-6' />} title='Author' href='/author' />
+  <Card icon={<ChatBubbleBottomCenterTextIcon className='h-6 w-6' />} title='Quote' href='/quote' />
+  <Card icon={<SwatchIcon className='h-6 w-6' />} title='Genre' href='/genre' />
+  <Card icon={<RectangleStackIcon className='h-6 w-6' />} title='Tag' href='/tag' />
+</Cards>

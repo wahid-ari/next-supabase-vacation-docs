@@ -1,0 +1,44 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get All Genre
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/genre</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Art",
+    "link": "https://www.goodreads.com/genres/art",
+    "created_at": "2023-05-24T08:01:37.773727+00:00",
+    "slug": "art"
+  },
+  {
+    "id": 2,
+    "name": "Biography",
+    "link": "https://www.goodreads.com/genres/biography",
+    "created_at": "2023-05-24T08:01:37.773727+00:00",
+    "slug": "biography"
+  }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

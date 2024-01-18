@@ -1,0 +1,30 @@
+import ApiPlayground from '@/components/ApiPlayground';
+import Param from '@/components/Param';
+
+# Book API Playground
+
+The API playground is an interactive environment to make requests and preview an API endpoint.
+
+### All Book
+
+<ApiPlayground method='GET' endpoint='book'>
+  Tes endpoint `book`
+</ApiPlayground>
+
+### Single Book by ID
+
+<ApiPlayground method='GET' endpoint='book' param={true} paramName='id'>
+  Tes endpoint `book` with `id` as param
+  <Param name='id' type='number'>
+    Book ID
+  </Param>
+</ApiPlayground>
+
+### Single Book by SLUG
+
+<ApiPlayground method='GET' endpoint='book' param={true} paramName='slug'>
+  Tes endpoint `book` with `slug` as param
+  <Param name='slug' type='string'>
+    Book SLUG
+  </Param>
+</ApiPlayground>

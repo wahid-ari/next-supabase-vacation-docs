@@ -1,0 +1,47 @@
+{
+  "index": "Introduction",
+  "login": "Login",
+  "logout": "Logout",
+  "search": "Search",
+  "statistics": "Statistics",
+  "dashboard": "Dashboard",
+  "sitemap": "Sitemap",
+  "book": "Book",
+  "author": "Author",
+  "quote": "Quote",
+  "genre": "Genre",
+  "tag": "Tag",
+  "updates": "Updates",
+  "blog": {
+    "title": "Blog",
+    "type": "page",
+    "theme": {
+      "sidebar": false
+    }
+  },
+  "about": {
+    "title": "About",
+    "type": "page",
+    "display": "hidden"
+  },
+  "company": {
+    "title": "About",
+    "type": "menu",
+    "items": {
+      "about": {
+        "title": "About",
+        "href": "/about"
+      },
+      "contact": {
+        "title": "Contact",
+        "href": "mailto:wahiid.ari@gmail.com"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://github.com/wahidari",
+    "newWindow": true
+  }
+}

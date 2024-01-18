@@ -1,0 +1,111 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+import Param from '@/components/Param';
+
+# Update Book
+
+To edit the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge variant="info">PUT</Badge>
+
+**URL :** <Badge variant="dark">/api/book</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+  "id": 301,
+  "author_id": 216,
+  "title": "New Book Title Edit",
+  "isbn": "9780441627400 Edit",
+  "language": "English Edit",
+  "pages": "639 Edit",
+  "published": "1958-02-02",
+  "link": "New Book Link Edit",
+  "image": "New Book Image Edit",
+  "description": "New Book Description Edit",
+  "genre": [
+    {
+      "value": 1,
+      "label": "a Edit"
+    },
+    {
+      "value": 2,
+      "label": "b Edit"
+    }
+  ]
+}
+```
+
+<Param name="id" type="number" required={true}>
+	Book ID.
+</Param>
+<Param name="title" type="string" required={true}>
+	Book title.
+</Param>
+<Param name="author_id" type="number">
+	Book author ID.
+</Param>
+<Param name="isbn" type="string">
+	Book ISBN.
+</Param>
+<Param name="language" type="string">
+	Book language.
+</Param>
+<Param name="pages" type="string">
+	Book total page.
+</Param>
+<Param name="published" type="string (date)">
+	Book published date.
+</Param>
+<Param name="link" type="string">
+	Book goodread link.
+</Param>
+<Param name="image" type="string">
+	Book image URL
+</Param>
+<Param name="description" type="string">
+	Book description
+</Param>
+<Param name="genre" type="array of object">
+	Book genres. 
+	```json
+	[
+		{
+			"value": "ID of Genre"
+		},
+		{
+			"value": "ID of Genre"
+		}
+	]
+	```
+</Param>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "message": "Success update book"
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 - Unprocessable Content</BadgeOutline>
+
+```json
+{
+  "error": "Title required"
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

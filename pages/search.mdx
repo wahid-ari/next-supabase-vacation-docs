@@ -1,0 +1,207 @@
+import ApiPlayground from '@/components/ApiPlayground';
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+import CodeGroup from '@/components/CodeGroup';
+
+# Search
+
+Returns a collection of relevant data matching a specified query. If no parameters are passed, it thrown an error.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+### Search API Playground
+
+The API playground is an interactive environment to make requests and preview an API endpoint.
+
+<ApiPlayground method='GET' endpoint='search' param={true} paramName='q'>
+  Tes endpoint `search` with `q` as param
+</ApiPlayground>
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/search?q=hunger</Badge>
+
+**Request :**
+
+<CodeGroup items={["Javascript", "Python"]}>
+	<CodeGroup.Item>
+	```jsx copy
+	var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+  };
+
+fetch("/api/search?q=hunger", requestOptions)
+.then(response => response.text())
+.then(result => console.log(result))
+.catch(error => console.log('error', error));
+`
+	</CodeGroup.Item>
+	<CodeGroup.Item>
+	`python copy
+import http.client
+
+conn = http.client.HTTPSConnection("localhost", 3000)
+payload = ''
+headers = {}
+conn.request("GET", "/api/search?q=hunger", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+
+````
+</CodeGroup.Item>
+
+</CodeGroup>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "books": [
+    {
+      "id": 1,
+      "created_at": "2023-05-24T08:44:31.337685+00:00",
+      "author_id": 1,
+      "title": "The Hunger Games (The Hunger Games #1)",
+      "isbn": "",
+      "language": "English",
+      "pages": "374",
+      "published": "2008-09-14",
+      "genre": "Young Adult, Fiction, Dystopia, Fantasy, Science Fiction, Romance, Adventure",
+      "rating": "4.33 avg rating - 7.985.168 ratings",
+      "score": "3.498.046",
+      "vote": "35.609",
+      "link": "https://www.goodreads.com/book/show/2767052-the-hunger-games",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052.jpg",
+      "image_small": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052._SX50_.jpg",
+      "description": "Could you survive on your own in the wild, with every one out to make sure you don't live to see the morning?In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. The Capitol is harsh and cruel and keeps the districts in line by forcing them all to send one boy and one girl between the ages of twelve and eighteen to participate in the annual Hunger Games, a fight to the death on live TV. Sixteen-year-old Katniss Everdeen, who lives alone with her mother and younger sister, regards it as a death sentence when she steps forward to take her sister's place in the Games. But Katniss has been close to dead before—and survival, for her, is second nature. Without really meaning to, she becomes a contender. But if she is to win, she will have to start making choices that weight survival against humanity and life against love."
+    },
+    {
+      "id": 181,
+      "created_at": "2023-05-24T08:44:31.337685+00:00",
+      "author_id": 1,
+      "title": "The Hunger Games Trilogy Boxset (The Hunger Games #1-3)",
+      "isbn": "9780545265355",
+      "language": "English",
+      "pages": "1155",
+      "published": "2008-01-01",
+      "genre": "Young Adult, Fiction, Fantasy, Dystopia, Science Fiction, Romance, Adventure",
+      "rating": "4.49 avg rating - 212.401 ratings",
+      "score": "91.647",
+      "vote": "1.078",
+      "link": "https://www.goodreads.com/book/show/7938275-the-hunger-games-trilogy-boxset",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1360094673i/7938275.jpg",
+      "image_small": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1360094673i/7938275._SY75_.jpg",
+      "description": "The extraordinary, ground breaking New York Times bestsellers The Hunger Games and Catching Fire, along with the third book in The Hunger Games trilogy by Suzanne Collins, Mockingjay, are available for the first time ever in a beautiful boxset edition. Stunning, gripping, and powerful. The trilogy is now complete!"
+    }
+  ],
+  "authors": []
+}
+````
+
+**URL :** <Badge variant="dark">/api/search?q=jane</Badge>
+
+**Request :**
+
+<CodeGroup items={["Javascript", "Python"]}>
+	<CodeGroup.Item>
+	```jsx copy
+	var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+  };
+
+fetch("/api/search?q=jane", requestOptions)
+.then(response => response.text())
+.then(result => console.log(result))
+.catch(error => console.log('error', error));
+`
+	</CodeGroup.Item>
+	<CodeGroup.Item>
+	`python copy
+import http.client
+
+conn = http.client.HTTPSConnection("localhost", 3000)
+payload = ''
+headers = {}
+conn.request("GET", "/api/search?q=jane", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+
+````
+</CodeGroup.Item>
+
+</CodeGroup>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "books": [
+    {
+      "id": 16,
+      "created_at": "2023-05-24T08:44:31.337685+00:00",
+      "author_id": 15,
+      "title": "Jane Eyre",
+      "isbn": "9780142437209",
+      "language": "English",
+      "pages": "532",
+      "published": "1847-10-16",
+      "genre": "Classics, Fiction, Romance, Historical Fiction, Gothic, Literature, Historical",
+      "rating": "4.14 avg rating - 1.979.936 ratings",
+      "score": "987.734",
+      "vote": "10.398",
+      "link": "https://www.goodreads.com/book/show/10210.Jane_Eyre",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1557343311i/10210.jpg",
+      "image_small": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1557343311i/10210._SY75_.jpg",
+      "description": "Orphaned as a child, Jane has felt an outcast her whole young life. Her courage is tested once again when she arrives at Thornfield Hall, where she has been hired by the brooding, proud Edward Rochester to care for his ward Adèle. Jane finds herself drawn to his troubled yet kind spirit. She falls in love. Hard. But there is a terrifying secret inside the gloomy, forbidding Thornfield Hall. Is Rochester hiding from Jane? Will Jane be left heartbroken and exiled once again?"
+    }
+  ],
+  "authors": [
+    {
+      "id": 3,
+      "name": "Jane Austen",
+      "link": "https://www.goodreads.com/author/show/1265.Jane_Austen",
+      "image": "https://images.gr-assets.com/authors/1651510251p5/1265.jpg",
+      "born": "Steventon Rectory, Hampshire, England, The United Kingdom",
+      "web": "http://www.janeausten.org/",
+      "bio": "Jane Austen was an English novelist whose works of romantic fiction, set among the landed gentry, earned her a place as one of the most widely read writers in English literature, her realism and biting social commentary cementing her historical importance among scholars and critics. Austen lived her entire life as part of a close-knit family located on the lower fringes of the English landed gentry. She was educated primarily by her father and older brothers as well as through her own reading. The steadfast support of her family was critical to her development as a professional writer. Her artistic apprenticeship lasted from her teenage years until she was about 35 years old. During this period, she experimented with various literary forms,",
+      "created_at": "2023-05-24T08:04:27.745623+00:00"
+    },
+    {
+      "id": 144,
+      "name": "Jane Carruth",
+      "link": "https://www.goodreads.com/author/show/34933.Jane_Carruth",
+      "image": "https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png",
+      "born": "",
+      "web": "",
+      "bio": "",
+      "created_at": "2023-05-24T08:04:27.745623+00:00"
+    }
+  ]
+}
+````
+
+**Response :**
+
+<CodeGroup items={["404", "500"]}>
+	<CodeGroup.Item>
+	```json
+	{
+        "error_code": "404",
+        "message": "Not Found",
+        "books": [],
+        "authors": []
+	}
+	```
+	</CodeGroup.Item>
+	<CodeGroup.Item>
+	```json
+	{
+		"error_code": "500",
+		"message": "Internal Server Error"
+	}
+	```
+	</CodeGroup.Item>
+</CodeGroup>

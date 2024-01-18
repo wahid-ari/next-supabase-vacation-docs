@@ -1,0 +1,65 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get Detail Genre
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/genre?id=(id)</Badge>
+
+**URL :** <Badge variant="dark">/api/genre?slug=(slug)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "id": 2,
+  "name": "Biography",
+  "link": "https://www.goodreads.com/genres/biography",
+  "created_at": "2023-05-24T08:01:37.773727+00:00",
+  "slug": "biography",
+  "books_by_genres": [
+    {
+      "id": 88,
+      "slug": "angelas-ashes",
+      "title": "Angela's Ashes (Frank McCourt #1)",
+      "published": "1996-09-05",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348317139i/252577.jpg",
+      "book_authors": {
+        "id": 78,
+        "slug": "frank-mccourt",
+        "name": "Frank McCourt",
+        "image": "https://images.gr-assets.com/authors/1263585664p5/3347.jpg"
+      }
+    },
+    {
+      "id": 128,
+      "slug": "tuesdays-with-morrie",
+      "title": "Tuesdays with Morrie",
+      "published": "1997-08-18",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1423763749i/6900.jpg",
+      "book_authors": {
+        "id": 105,
+        "slug": "mitch-albom",
+        "name": "Mitch Albom",
+        "image": "https://images.gr-assets.com/authors/1658972518p5/2331.jpg"
+      }
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```
