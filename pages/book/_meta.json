@@ -1,8 +1,0 @@
-{
-  "list": "Get All Book",
-  "detail": "Get Detail Book",
-  "seo": "Get Detail SEO Book",
-  "create": "Create Book",
-  "edit": "Update Book",
-  "delete": "Delete Book"
-}

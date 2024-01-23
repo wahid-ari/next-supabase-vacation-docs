@@ -1,0 +1,151 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+import Param from '@/components/Param';
+
+# Create Destination
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge>POST</Badge>
+
+**URL :** <Badge variant="dark">/api/destination</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+	"name": "New Destination",
+	"image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500",
+	"header_image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500",
+	"description": "Destination Description",
+	"content": "Destination Content",
+	"video_url": "https://youtu.be/_IzOqfrLc0o",
+	"location": "Destination Location",
+	"island_id": 1,
+	"province_id": 1,
+	"category": [
+		{
+			"value": 1
+		},
+		{
+			"value": 2
+		}
+	],
+	"latlng": [-2.3723687086440504, 113.11523437500001]
+}
+```
+
+<Param name="name" type="string" required={true}>
+	Destination name.
+</Param>
+<Param name="image_url" type="string" required={true}>
+	Destination image URL
+</Param>
+<Param name="description" type="string" required={true}>
+	Destination Description. Minimum Length 80
+</Param>
+<Param name="content" type="string" required={true}>
+	Destination Content. Minimum Length 100
+</Param>
+<Param name="header_image_url" type="string">
+	Destination header image URL
+</Param>
+<Param name="video_url" type="string">
+	Destination video URL.
+</Param>
+<Param name="location" type="string">
+	Destination location.
+</Param>
+<Param name="island_id" type="number">
+	Destination island ID.
+</Param>
+<Param name="province_id" type="number">
+	Destination province ID.
+</Param>
+<Param name="latlng" type="array of double">
+	Destination latitude and longtitude. 
+	```json
+	[latitude (-2.372), longtitude (113.115)]
+	```
+</Param>
+<Param name="category" type="array of object">
+	Destination category. 
+	```json
+	[
+		{
+			"value": ID of category (1)
+		},
+		{
+			"value": ID of category (2)
+		}
+	]
+	```
+</Param>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "message": "Success add Destination"
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 - Unprocessable Content</BadgeOutline>
+
+```json
+{
+    "error": [
+        {
+            "code": "too_small",
+            "minimum": 1,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Name is required",
+            "path": [
+                "name"
+            ]
+        },
+        {
+            "code": "too_small",
+            "minimum": 1,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Image URL is required",
+            "path": [
+                "image_url"
+            ]
+        },
+        {
+            "code": "too_small",
+            "minimum": 80,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Description is required",
+            "path": [
+                "description"
+            ]
+        },
+        {
+            "code": "too_small",
+            "minimum": 100,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Content is required",
+            "path": [
+                "content"
+            ]
+        }
+    ]
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

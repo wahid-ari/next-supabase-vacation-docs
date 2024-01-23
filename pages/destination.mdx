@@ -1,0 +1,63 @@
+import ApiPlayground from '@/components/ApiPlayground';
+import Param from '@/components/Param';
+
+# Destination API Playground
+
+The API playground is an interactive environment to make requests and preview an API endpoint.
+
+### All Destination
+
+<ApiPlayground method='GET' endpoint='destination'>
+  Tes endpoint `destination`
+</ApiPlayground>
+
+### All Destination With All Category
+
+<ApiPlayground method='GET' endpoint='destination/with-category'>
+  Tes endpoint `destination/with-category`
+</ApiPlayground>
+
+### Detail Destination by ID
+
+<ApiPlayground method='GET' endpoint='destination' param={true} paramName='id'>
+  Tes endpoint `destination` with `id` as param
+  <Param name='id' type='number'>
+    destination ID
+  </Param>
+</ApiPlayground>
+
+### Detail Destination by SLUG
+
+<ApiPlayground method='GET' endpoint='destination' param={true} paramName='slug'>
+  Tes endpoint `destination` with `slug` as param
+  <Param name='slug' type='string'>
+    destination SLUG
+  </Param>
+</ApiPlayground>
+
+### Search Destination
+
+<ApiPlayground method='GET' endpoint='destination' param={true} paramName='q'>
+  Tes endpoint `destination` with `q` as param
+  <Param name='q' type='string'>
+    destination Search QUERY
+  </Param>
+</ApiPlayground>
+
+### Detail Destination SEO
+
+<ApiPlayground method='GET' endpoint='destination?seo=true&limit=10' param={true} paramName='slug'>
+  Tes endpoint `destination` with `slug`, `seo=true` and `limit=10` as param
+  <Param name='slug' type='string'>
+    destination SLUG
+  </Param>
+</ApiPlayground>
+
+### Destination Pagination
+
+<ApiPlayground method='GET' endpoint='destination' param={true} paramName='page'>
+  Tes endpoint `destination` with `page` as param
+  <Param name='page' type='string'>
+    destination Pagination PAGE
+  </Param>
+</ApiPlayground>

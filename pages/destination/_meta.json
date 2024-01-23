@@ -1,0 +1,11 @@
+{
+  "list": "Get All Destination",
+  "search": "Search Destination",
+  "pagination": "Destination Pagination",
+  "detail": "Get Detail Destination",
+  "seo": "Get Detail SEO Destination",
+  "with-category": "Get All Destination with All Category",
+  "create": "Create Destination",
+  "edit": "Update Destination",
+  "delete": "Delete Destination"
+}
