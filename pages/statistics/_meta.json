@@ -1,6 +1,5 @@
 {
-  "book-by-author": "Book by Author",
-  "book-by-genre": "Book by Genre",
-  "quote-by-author": "Quote by Author",
-  "quote-by-tag": "Quote by Tag"
+  "destination-by-island": "Destination by Island",
+  "destination-by-province": "Destination by Province",
+  "destination-by-category": "Destination by Category"
 }

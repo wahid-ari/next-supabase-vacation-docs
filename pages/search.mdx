@@ -18,7 +18,7 @@ The API playground is an interactive environment to make requests and preview an
 
 **Method :** <Badge variant="success">GET</Badge>
 
-**URL :** <Badge variant="dark">/api/search?q=hunger</Badge>
+**URL :** <Badge variant="dark">/api/search?q=bali</Badge>
 
 **Request :**
 
@@ -30,25 +30,24 @@ The API playground is an interactive environment to make requests and preview an
       redirect: 'follow'
   };
 
-fetch("/api/search?q=hunger", requestOptions)
-.then(response => response.text())
-.then(result => console.log(result))
-.catch(error => console.log('error', error));
-`
+  fetch("/api/search?q=bali", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+```
 	</CodeGroup.Item>
 	<CodeGroup.Item>
-	`python copy
+	```python copy
 import http.client
 
 conn = http.client.HTTPSConnection("localhost", 3000)
 payload = ''
 headers = {}
-conn.request("GET", "/api/search?q=hunger", payload, headers)
+conn.request("GET", "/api/search?q=bali", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
-
-````
+```
 </CodeGroup.Item>
 
 </CodeGroup>
@@ -57,49 +56,78 @@ print(data.decode("utf-8"))
 
 ```json
 {
-  "books": [
+  "destination": [
     {
       "id": 1,
-      "created_at": "2023-05-24T08:44:31.337685+00:00",
-      "author_id": 1,
-      "title": "The Hunger Games (The Hunger Games #1)",
-      "isbn": "",
-      "language": "English",
-      "pages": "374",
-      "published": "2008-09-14",
-      "genre": "Young Adult, Fiction, Dystopia, Fantasy, Science Fiction, Romance, Adventure",
-      "rating": "4.33 avg rating - 7.985.168 ratings",
-      "score": "3.498.046",
-      "vote": "35.609",
-      "link": "https://www.goodreads.com/book/show/2767052-the-hunger-games",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052.jpg",
-      "image_small": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975i/2767052._SX50_.jpg",
-      "description": "Could you survive on your own in the wild, with every one out to make sure you don't live to see the morning?In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. The Capitol is harsh and cruel and keeps the districts in line by forcing them all to send one boy and one girl between the ages of twelve and eighteen to participate in the annual Hunger Games, a fight to the death on live TV. Sixteen-year-old Katniss Everdeen, who lives alone with her mother and younger sister, regards it as a death sentence when she steps forward to take her sister's place in the Games. But Katniss has been close to dead before—and survival, for her, is second nature. Without really meaning to, she becomes a contender. But if she is to win, she will have to start making choices that weight survival against humanity and life against love."
+      "name": "Kintamani: Bali's Scenic Gem",
+      "slug": "kintamani-balis-scenic-gem",
+      "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/bali-nusa-tenggara/Kintamani.jpg",
+      "description": "Explore the scenic gem of Kintamani in Bali. Marvel at Mount Batur's beauty, serene Lake Batur, and captivating volcanic landscapes",
+      "location": "Kintamani, Bali",
+      "vacation_island": {
+        "id": 2,
+        "name": "Bali",
+        "slug": "bali"
+      },
+      "vacation_province": {
+        "id": 15,
+        "name": "Bali",
+        "slug": "bali"
+      }
     },
     {
-      "id": 181,
-      "created_at": "2023-05-24T08:44:31.337685+00:00",
-      "author_id": 1,
-      "title": "The Hunger Games Trilogy Boxset (The Hunger Games #1-3)",
-      "isbn": "9780545265355",
-      "language": "English",
-      "pages": "1155",
-      "published": "2008-01-01",
-      "genre": "Young Adult, Fiction, Fantasy, Dystopia, Science Fiction, Romance, Adventure",
-      "rating": "4.49 avg rating - 212.401 ratings",
-      "score": "91.647",
-      "vote": "1.078",
-      "link": "https://www.goodreads.com/book/show/7938275-the-hunger-games-trilogy-boxset",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1360094673i/7938275.jpg",
-      "image_small": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1360094673i/7938275._SY75_.jpg",
-      "description": "The extraordinary, ground breaking New York Times bestsellers The Hunger Games and Catching Fire, along with the third book in The Hunger Games trilogy by Suzanne Collins, Mockingjay, are available for the first time ever in a beautiful boxset edition. Stunning, gripping, and powerful. The trilogy is now complete!"
+      "id": 2,
+      "name": "Bali",
+      "slug": "bali",
+      "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revisi-2020/destinations-thumbnail/Bali-Thumbnail.jpg",
+      "description": "Bali is also known as the Land of the Gods with dramatic dances and colorful ceremonies, to its luxurious beach resorts with exciting nightlife and famous for surfers’ paradise.",
+      "location": "Bali, Indonesia",
+      "vacation_island": {
+        "id": 2,
+        "name": "Bali",
+        "slug": "bali"
+      },
+      "vacation_province": {
+        "id": 15,
+        "name": "Bali",
+        "slug": "bali"
+      }
     }
   ],
-  "authors": []
+  "island": [
+    {
+      "id": 2,
+      "name": "Bali",
+      "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/Bali.jpg",
+      "created_at": "2023-10-23T11:57:08.13947+00:00",
+      "slug": "bali"
+    }
+  ],
+  "province": [
+    {
+      "id": 15,
+      "name": "Bali",
+      "image_url": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRaUcifh5ereEe6jqZWOXjbZFXogeqCWrf9gpcdsPIe_wlc6Gk2QqN6AV8LKp2P13l0NNzHUWAbO2E_9y0cGWgSJSathgRR",
+      "created_at": "2023-10-24T08:41:10.41019+00:00",
+      "island_id": 2,
+      "slug": "bali"
+    }
+  ],
+  "video": [
+    {
+      "id": 9,
+      "created_at": "2023-10-23T12:46:34.151601+00:00",
+      "title": "Bali",
+      "video_url": "https://youtu.be/qjP4QdZK7tc",
+      "island_id": 2,
+      "province_id": 15
+    }
+  ],
+  "category": []
 }
-````
+```
 
-**URL :** <Badge variant="dark">/api/search?q=jane</Badge>
+**URL :** <Badge variant="dark">/api/search?q=jawa</Badge>
 
 **Request :**
 
@@ -111,25 +139,24 @@ print(data.decode("utf-8"))
       redirect: 'follow'
   };
 
-fetch("/api/search?q=jane", requestOptions)
-.then(response => response.text())
-.then(result => console.log(result))
-.catch(error => console.log('error', error));
-`
+  fetch("/api/search?q=jawa", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+```
 	</CodeGroup.Item>
 	<CodeGroup.Item>
-	`python copy
+	```python copy
 import http.client
 
 conn = http.client.HTTPSConnection("localhost", 3000)
 payload = ''
 headers = {}
-conn.request("GET", "/api/search?q=jane", payload, headers)
+conn.request("GET", "/api/search?q=jawa", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
-
-````
+```
 </CodeGroup.Item>
 
 </CodeGroup>
@@ -138,50 +165,65 @@ print(data.decode("utf-8"))
 
 ```json
 {
-  "books": [
-    {
-      "id": 16,
-      "created_at": "2023-05-24T08:44:31.337685+00:00",
-      "author_id": 15,
-      "title": "Jane Eyre",
-      "isbn": "9780142437209",
-      "language": "English",
-      "pages": "532",
-      "published": "1847-10-16",
-      "genre": "Classics, Fiction, Romance, Historical Fiction, Gothic, Literature, Historical",
-      "rating": "4.14 avg rating - 1.979.936 ratings",
-      "score": "987.734",
-      "vote": "10.398",
-      "link": "https://www.goodreads.com/book/show/10210.Jane_Eyre",
-      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1557343311i/10210.jpg",
-      "image_small": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1557343311i/10210._SY75_.jpg",
-      "description": "Orphaned as a child, Jane has felt an outcast her whole young life. Her courage is tested once again when she arrives at Thornfield Hall, where she has been hired by the brooding, proud Edward Rochester to care for his ward Adèle. Jane finds herself drawn to his troubled yet kind spirit. She falls in love. Hard. But there is a terrifying secret inside the gloomy, forbidding Thornfield Hall. Is Rochester hiding from Jane? Will Jane be left heartbroken and exiled once again?"
-    }
-  ],
-  "authors": [
-    {
-      "id": 3,
-      "name": "Jane Austen",
-      "link": "https://www.goodreads.com/author/show/1265.Jane_Austen",
-      "image": "https://images.gr-assets.com/authors/1651510251p5/1265.jpg",
-      "born": "Steventon Rectory, Hampshire, England, The United Kingdom",
-      "web": "http://www.janeausten.org/",
-      "bio": "Jane Austen was an English novelist whose works of romantic fiction, set among the landed gentry, earned her a place as one of the most widely read writers in English literature, her realism and biting social commentary cementing her historical importance among scholars and critics. Austen lived her entire life as part of a close-knit family located on the lower fringes of the English landed gentry. She was educated primarily by her father and older brothers as well as through her own reading. The steadfast support of her family was critical to her development as a professional writer. Her artistic apprenticeship lasted from her teenage years until she was about 35 years old. During this period, she experimented with various literary forms,",
-      "created_at": "2023-05-24T08:04:27.745623+00:00"
-    },
-    {
-      "id": 144,
-      "name": "Jane Carruth",
-      "link": "https://www.goodreads.com/author/show/34933.Jane_Carruth",
-      "image": "https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png",
-      "born": "",
-      "web": "",
-      "bio": "",
-      "created_at": "2023-05-24T08:04:27.745623+00:00"
-    }
-  ]
+    "destination": [
+        {
+            "id": 26,
+            "name": "Karimun Jawa",
+            "slug": "karimun-jawa",
+            "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/karimunthumb.jpg",
+            "description": "Situated some 90km northwest off the northern coast of Jepara Regency in Central Java Province, the Karimunjawa Archipelago is a chain of breathtaking coral-fringed islands replete with underwater splendor secluded in the open Java Sea",
+            "location": "Jepara, Jawa Tengah",
+            "vacation_island": {
+                "id": 1,
+                "name": "Jawa",
+                "slug": "jawa"
+            },
+            "vacation_province": {
+                "id": 11,
+                "name": "Jawa Tengah",
+                "slug": "jawa-tengah"
+            }
+        }
+    ],
+    "island": [
+        {
+            "id": 1,
+            "name": "Jawa",
+            "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/Java.jpg",
+            "created_at": "2023-10-23T11:57:08.13947+00:00",
+            "slug": "jawa"
+        }
+    ],
+    "province": [
+        {
+            "id": 10,
+            "name": "Jawa Barat",
+            "image_url": "https://lh5.googleusercontent.com/p/AF1QipNFxyUaCKXIOFerN3M_3dJPSIHs6p13kxU0EweG=w540-h312-n-k-no",
+            "created_at": "2023-10-24T08:41:10.41019+00:00",
+            "island_id": 1,
+            "slug": "jawa-barat"
+        },
+        {
+            "id": 11,
+            "name": "Jawa Tengah",
+            "image_url": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSE48OM7uILxOgZF7PuUjEwgyhcuuASK6eT8vpgKrDrihPTRwHz8cSynsRsgJ6fCSE9LuclS6KHU5O1ashlu2V8Z7yDAVLC",
+            "created_at": "2023-10-24T08:41:10.41019+00:00",
+            "island_id": 1,
+            "slug": "jawa-tengah"
+        },
+        {
+            "id": 13,
+            "name": "Jawa Timur",
+            "image_url": "https://lh5.googleusercontent.com/p/AF1QipN8RUH71iXvIbld382W0OS7P30BNWhUByqEUNOy=w540-h312-n-k-no",
+            "created_at": "2023-10-24T08:41:10.41019+00:00",
+            "island_id": 1,
+            "slug": "jawa-timur"
+        }
+    ],
+    "video": [],
+    "category": []
 }
-````
+```
 
 **Response :**
 
@@ -191,8 +233,11 @@ print(data.decode("utf-8"))
 	{
         "error_code": "404",
         "message": "Not Found",
-        "books": [],
-        "authors": []
+        "destination": [],
+        "island": [],
+        "province": [],
+        "video": [],
+        "category": []
 	}
 	```
 	</CodeGroup.Item>

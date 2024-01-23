@@ -1,0 +1,818 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get RSS
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/rss</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+    "destination": [
+        {
+            "name": "Kintamani: Bali's Scenic Gem",
+            "description": "Explore the scenic gem of Kintamani in Bali. Marvel at Mount Batur's beauty, serene Lake Batur, and captivating volcanic landscapes",
+            "slug": "kintamani-balis-scenic-gem",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bali",
+            "description": "Bali is also known as the Land of the Gods with dramatic dances and colorful ceremonies, to its luxurious beach resorts with exciting nightlife and famous for surfers’ paradise.",
+            "slug": "bali",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Sanur",
+            "description": "The waters of Sanur are protected by a long string of offshore reefs, creating large, warm shallow, safe lagoons that are perfectly clear and excellent for swimming, snorkeling and a whole array of water sports.",
+            "slug": "sanur",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Labuan Bajo",
+            "description": "Labuan Bajo is on the westernmost tip of the Island of Flores, Indonesia and the home of the Komodo dragons and other fascinating wildlife. It also known as the city of sunset.",
+            "slug": "labuan-bajo",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Sumbawa",
+            "description": "Situated in West Nusa Tenggara is the remote and tranquil island of Sumbawa. Relatively untouched by the common tourist, the island is renown for its picturesque white sandy beaches, luscious landscapes, beautiful diving destinations and quaint local culture.",
+            "slug": "sumbawa",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Mount Agung",
+            "description": "Standing majestically on the eastern seaboard of Bali is the island’s highest mountain: Gunung Agung or Mount Agung, located in the district of Karangasem. With its summit reaching a height of 3,031 meters above sea level, Mt. Agung affects its surrounding climate. Its western slopes catch the rain clouds making the west side lush and fertile, while its eastern slopes remains dry and barren.",
+            "slug": "mount-agung",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Seminyak",
+            "description": "Seminyak provides a serene luxury that will fulfill your tropical fantasy. Book your flight and enjoy your stay in Seminyak, Bali!",
+            "slug": "seminyak",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Kupang on Timur",
+            "description": "During World War II, the city of Kupang, formerly known as Koepang, on the island of Timor, was the hub for refueling and landing for long-haul flights from Europe to Australia.",
+            "slug": "kupang-on-timur",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Flores",
+            "description": "Flores is Indonesia’s exquisite flower of the east. Hidden in the shadows of its famous neighbor Bali, now the island blooms as a tropical paradise!",
+            "slug": "flores",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Lombok",
+            "description": "Lombok Island is in West Nusa Tenggara with its divine beaches, the majestic Mount Rinjani and spectacular marine life  Visit the hot spot destination : Gili Trawangan, Gili Meno and Gili Air.",
+            "slug": "lombok",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Alor Island",
+            "description": "Extending at the east- most tip of Flores Island, still in the province of East Nusatenggara, Alor is a name pinned to the regency, the archipelago, as well as the main island of the archipelago.",
+            "slug": "alor-island",
+            "created_at": "2023-12-14T09:12:27.471215+00:00"
+        },
+        {
+            "name": "Nusa Dua",
+            "description": "Situated about 40 Km from Bali Island, Nusa Dua features many internationally acclaimed exclusive luxuries that was purposely built to present the natural beauty of the island itself.",
+            "slug": "nusa-dua",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Ubud",
+            "description": "Have you ever seen the soothing image of rice field terraces in Bali? If you have, then you can also come to see them yourself in Ubud. Ubud offers a soothing vista that everyone needs to start a good day!",
+            "slug": "ubud",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Uluwatu",
+            "description": "Uluwatu is home of the most famous waves in Bali. The spot offers several waves which are working with different swells and tides. The Peak is best at mid and high tide, closes out at low tide. In front of the cave, it's the most consistant. The Racetracks is at 100 meters further with fast wave, a lot of sections with easy tubes. Best at low tide and at 6 ft which can hold bigger swell. On the right tide and the right swell, 'The Peak' connects with 'Racetraks'.",
+            "slug": "uluwatu",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Kuta",
+            "description": "Kuta today has become a popular beach destination in its own right, alive with tourists from all over the world, swimming, surfing or sunbathing by the beach. Others, casually dressed in shorts, T-shirts and flip-flops stroll along its main road, shopping around or enjoying meals at its many open air restaurants. When in Kuta you know that you are in a holiday town, and people here are in a holiday mood.",
+            "slug": "kuta",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "West Bali National Park",
+            "description": "West Bali National Park. Home to over a hundred species of wildlife, the national park is best known as the sanctuary of the exotic white Bali Starling, an endemic iconic bird of the island of the gods.",
+            "slug": "west-bali-national-park",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Tanah Lot",
+            "description": "Tanah Lot epitomizes Bali as the romantic island. With temples perched high facing the ocean, it is so easy to feel awestruck with wonders. See for yourself!",
+            "slug": "tanah-lot",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Denpasar",
+            "description": "Denpasar is the main hub in Bali. The international gate to enter this island is The Ngurah Rai Airport in Denpasar. Come explore and have fun!",
+            "slug": "denpasar",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Cirebon",
+            "description": "Explore Cirebon's unique blend of Sundanese, Javanese, Chinese, Indian, Arab, and European cultures. A rich tapestry of heritage awaits",
+            "slug": "cirebon",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bogor",
+            "description": "Explore Bogor's pleasant climate and famous attractions, including the Indonesian Agricultural Institute and the Zoological Museum",
+            "slug": "bogor",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Banyuwangi",
+            "description": "Discover Banyuwangi, Java's hidden treasure with stunning nature. Explore mountains, beaches, and witness the legendary Ijen Crater's blue flames",
+            "slug": "banyuwangi",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Baluran National Park",
+            "description": "Discover Baluran National Park's distinct savannah landscape and diverse wildlife on Java's east coast. Witness banteng, kancil, peacocks, and more",
+            "slug": "baluran-national-park",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Seribu Archipelago",
+            "description": "Experience tranquility in Kepulauan Seribu, an idyllic island paradise near Jakarta, perfect for relaxation, water sports, and exploration",
+            "slug": "seribu-archipelago",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Dieng Plateau",
+            "description": "The name ‘dieng’ which literally translates as ‘abode of the Gods’ says all you need to know about this collection small ancient temples set in the  remarkable volcanic landscape of the Dieng Plateau. The misty location, sulphurous springs and colored lakes truly make this a place of natural wonder and cultural significance.",
+            "slug": "dieng-plateau",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Ijen Crater",
+            "description": "Ijen plateau or known as 'Kawah Ijen' is highly recommended to mountain buffs and hikers. The magnificent turquoise sulfur lake of Kawah Ijen lies at 2148 m above sea level and is surrounded by the volcanos sheer crater walls.",
+            "slug": "ijen-crater",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Karimun Jawa",
+            "description": "Situated some 90km northwest off the northern coast of Jepara Regency in Central Java Province, the Karimunjawa Archipelago is a chain of breathtaking coral-fringed islands replete with underwater splendor secluded in the open Java Sea",
+            "slug": "karimun-jawa",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Demak",
+            "description": "The town of Demak was the seat of the once powerful Demak Sultanate, the cradle from where Islam spread throughout the entire island of Java.",
+            "slug": "demak",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Semarang: The Venice of Java",
+            "description": "The heart of Central Java, Semarang with its multicultural history, would be the best city for those who love exploring cities with diverse cultural heritage",
+            "slug": "semarang-the-venice-of-java",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Yogyakarta",
+            "description": "Yogyakarta is the cradle of civilization on Java.  From strolling through the living museum of The Kraton to the magnificent temples of Borobudur and Prambanan, this city is one of the foremost cultural centers of Indonesia.",
+            "slug": "yogyakarta",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Purwakarta",
+            "description": "Strategically situated between the capital city of Jakarta and West Java’s capital, Bandung, Purwakarta Regency was once better known as an industrial area.",
+            "slug": "purwakarta",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Kota Gede",
+            "description": "This precinct is most famous as the centre of Yogya’s silver industry. There are a number of workshops where visitors can stop by and watch silversmiths to see the remarkable way they can transform a piece of silver into a beautiful work of art.",
+            "slug": "kota-gede",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Magelang Regency",
+            "description": "Located some 40 kilometers northwest of the city of Yogyakarta and about 75 kilometers south of Semarang, the capital city of Central Java Province, is the Magelang Regency, which is best known as the launching pad for a visit to the magnificent Borobudur Temple.",
+            "slug": "magelang-regency",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Malang",
+            "description": "With leafy boulevards and a cooler climate, this city is a laid back destination, popular with many retirees in East Java.",
+            "slug": "malang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Majalengka",
+            "description": "The brand new West Java International Airport (BIJB) in the Kertajati regency has opened up the magical beauty of West Java to the world. To date, international flights could land only at the  Husein Sstranegara Airport in Bandung, which was formerly a military airbase.",
+            "slug": "majalengka",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Jakarta",
+            "description": "Jakarta is the capital city of the Republic of Indonesia. Located on the northwest of Java Island and home for over 10 million people with diverse ethnic group background from all over Indonesia.",
+            "slug": "jakarta",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Mount Halimun Salak National Park",
+            "description": "Halimun is a Sundanese Language translated as “mist”. The higher part of Mount Halimun, which resides in the north area, is almost always clouded by mist with a soaring elevation of 1,929 meters.",
+            "slug": "mount-halimun-salak-national-park",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Nusa Kambangan Island",
+            "description": "Have you ever imagine traveling to an island of prisoners? Nusa Kambangan is the Alcatraz of Indonesia. This island is a secured prison for renowned criminals, political prisoners, drug traffickers, terrorist and those convicted in high profile corruption cases.",
+            "slug": "nusa-kambangan-island",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Nglanggeran Tourism Village",
+            "description": "Within the Gunungkidul Regency in Yogyakarta Province lies the charming Desa Wisata Gunung Api Purba Nglanggeran, or simply Desa Wisata Nglanggeleran (Nglanggeleran Tourism Village). Once you step your foot in the area, you will be greeted by super friendly locals who will introduce you to their cultures and traditions. Is there any better way to delve deeper into the heart of another culture?",
+            "slug": "nglanggeran-tourism-village",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Surabaya",
+            "description": "This city used to be the trading hub for the illustrious inland empires of Java. Situated on the mouth of the Brantas River, today Surabaya is a modern industrial city.",
+            "slug": "surabaya",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bromo Tengger Semeru National Park",
+            "description": "Being the largest volcanic region in the province, Bromo Tengger Semeru National Park covers a massive area of 800 square km in the center of East Java.",
+            "slug": "bromo-tengger-semeru-national-park",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Ujung Kulon National Park",
+            "description": "Ujung Kulon National Park, One of the World’s Most Pristine Natural Ecosystem",
+            "slug": "ujung-kulon-national-park",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Solo",
+            "description": "Solo is part of the province of Central Java. The city has built on its reputation as a cultural hub. From Solonese dance, wayang puppetry through to hand-crafted batik.",
+            "slug": "solo",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Serang",
+            "description": "Serang is the capital of Banten Province which formerly the administrative center of the broader Serang Regency when Banten was still part of West Java.",
+            "slug": "serang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bandung",
+            "description": "Bandung is the largest city located in west Java and offers many fascinating destination. in the past, Bandung was the favorite resort of wealthy tea and coffee planters owners of swathes of undulating tea and coffee plantations.",
+            "slug": "bandung",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Merauke",
+            "description": "Discover Merauke, the captivating eastern Indonesian town. Explore its rich history, natural beauty, and vibrant culture",
+            "slug": "merauke",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Enchanting Ambon: Lush Mountains, Clear Waters",
+            "description": "Explore Ambon, a captivating island with lush mountains and crystal clear waters. Discover its rich history and hidden treasures for an unforgettable adventure.",
+            "slug": "enchanting-ambon-lush-mountains-clear-waters",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Ternate and Tidore",
+            "description": "The volcanic landscape of Ternate an Tidore has given the island its fertile soil and beaches with black glittering sands. Today, all around the islands are colorful boats in various sizes lying in the shallow turquoise water, shielded by swaying coconut trees.",
+            "slug": "ternate-and-tidore",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Sorong",
+            "description": "The town of Sorong, located on the 'beak' of the Bird’s Head Peninsula in West Papua is the departure point for your visit to the fabulous Raja Ampat marine park.",
+            "slug": "sorong",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Baliem Valley",
+            "description": "High up in the mountains of central Papua at an altitude of 1,600 meters above sea level, hemmed in by steep green mountain walls, lies the stunningly beautiful Baliem Valley",
+            "slug": "baliem-valley",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Jayapura",
+            "description": "Jayapura, located in East Papua, is the starting point for many travelers wanting to make the adventurous journey into the interior of Papua. Travelers come here for all kinds of adventures. This is where you can begin your trek into the remote Baliem Valley, or conduct sustainable crocodile conservation study for your thesis, or prepare to capture the magic of Lake Sentani and its culture on camera.",
+            "slug": "jayapura",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Banjarmasin",
+            "description": "Explore Banjarmasin, Kalimantan's urban hub intertwined with rivers. Discover floating markets, canals, and rich cultural heritage in this vibrant city",
+            "slug": "banjarmasin",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Balikpapan",
+            "description": "Experience the allure of Balikpapan, an exotic oil city in East Kalimantan. Explore its unique attractions, beaches, and industrial charm",
+            "slug": "balikpapan",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Martapura",
+            "description": "Situated some 45 km east of Banjarmasin, capital of South Kalimantan Province, Martapura is a sparkling little city literally filled with diamonds and all the precious rocks delved from inside Borneo’s earth.",
+            "slug": "martapura",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Pontianak",
+            "description": "Curious on how it looks like on the city that touches the zero equator point in Indonesia? Come to Pontianak and find the beauty by yourself!",
+            "slug": "pontianak",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Kuala Kapuas",
+            "description": "Kuala Kapuas is located at Kapuas River, 40 km from Banjarmasin. It is one of the major cities in Central Kalimantan with clean and comfortable city atmosphere.",
+            "slug": "kuala-kapuas",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Derawan Archipelago",
+            "description": "Derawan is Indonesia’s largest nesting site of the rare and endangered giant green turtles and hawksbill turtles, where one can daily watch turtles lay their eggs in the sand or swim to sea with the turtles.",
+            "slug": "derawan-archipelago",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Pangkalan Bun",
+            "description": "Pangkalan Bun is a pleasant town on the Arut River. 'Whoever drank from the Arut River will surely return to Pangkalan Bun,' says a classic saying for those who visit the town for the first time.",
+            "slug": "pangkalan-bun",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Palangkaraya",
+            "description": "Palangkaraya or Honoured and Sacred Great Place, is the capital city of Central Kalimantan.",
+            "slug": "palangkaraya",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Tarakan",
+            "description": "Situated just across the border from Sabah, Malaysia, the town and island of Tarakan is a part of young province, North Kalimantan.",
+            "slug": "tarakan",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Singkawang",
+            "description": "Singkawang is the capital of West Kalimantan and the second largest city in the province that bordering the State of Sarawak, Malaysia.",
+            "slug": "singkawang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bitung",
+            "description": "Discover Bitung's picturesque harbor, rich marine life, and vibrant trade scene. Explore Lembeh diving spots and Tangkoko Nature Reserve's unique fauna",
+            "slug": "bitung",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Mamuju: Sulawesi's Hidden Gem",
+            "description": "Uncover the hidden gem of Mamuju in Sulawesi. Immerse in pristine nature, diverse culture, and unique experiences. Your ultimate escape awaits.",
+            "slug": "mamuju-sulawesis-hidden-gem",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Likupang",
+            "description": "The beauty of Likupang Beach is a guarantee to easily catch your hearts since the first time you lay your eyes on the white sandy beach, its blue skies, and crystal clear waters.",
+            "slug": "likupang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Makassar",
+            "description": "Makassar is the largest city in eastern Indonesia and the capital city of the Province of South Sulawesi. Attractions in the heart of Makassar range from historical sites, boardwalk waterfront, a plethora of culinary treats and architectural landmarks.",
+            "slug": "makassar",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Selayar",
+            "description": "Located at the most southern end of South Sulawesi, this quiet and now isolated island of Selayar, with its swathes of pristine white sand beaches and crystal clear tropical waters used to have an illustrious past",
+            "slug": "selayar",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Tomohon",
+            "description": "When you visit this city during blossom season, you will see an amazing scenery of colorful flowers at the foot of a beautiful mountain.",
+            "slug": "tomohon",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Manado Tua Island",
+            "description": "Manado Tua (Old Manado) Island, together with the islands of Bunaken, Siladen, Mantehage and Nain form the Bunaken-Manado Tua Marine National Park",
+            "slug": "manado-tua-island",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Poso",
+            "description": "Lying just north of the Toraja highlands in South Sulawesi, Lake Poso is bordered by the Pendolo town at the south end of the lake and Tentena at the north, with several smaller villages scattered in between",
+            "slug": "poso",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Manado",
+            "description": "Manado has stunning underwater landscapes and great mountain panoramas. Don’t miss an adventure of a lifetime in Indonesia and visit Manado now!",
+            "slug": "manado",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Kendari",
+            "description": "Sulawesi Tenggara (Southeast Sulawesi) is on one of the world’s most uniquely shaped islands, often referred to as the 'Orchid Shaped Island'",
+            "slug": "kendari",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Tana Toraja",
+            "description": "Tana Toraja is safely protected beyond the lofty mountains and rugged granite cliffs of the central highlands of the island of Sulawesi and the home of the Toraja people",
+            "slug": "tana-toraja",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Wakatobi",
+            "description": "Wakatobi is widely recognized as having the highest number of reef and fish species in the world. Offer more than 50 spectacular dive sites easily accessible from the major islands. The habitat of large and small fish species, the playground of dolphins, turtles and even whales.",
+            "slug": "wakatobi",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Gorontalo",
+            "description": "Gorontalo, is nestled in the calm waters of the northern shoreline of the Tomini Bay, on the southern fringe of Sulawesi's protective northern arm",
+            "slug": "gorontalo",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bandar Lampung",
+            "description": "Discover Bengkulu's captivating nature charms and unique cuisine. Easily accessible by various transportation modes, experience its Malay culture and delights",
+            "slug": "bandar-lampung",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Belitung",
+            "description": "Explore Belitung's hidden gem of stunning white beaches and granite rock-adorned islands. Discover the beauty and tranquility of this Indonesian paradise ",
+            "slug": "belitung",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Batam",
+            "description": "Experiencing the first-class golf courses, water adventures, duty-free shopping, rejuvenating spas and relaxing beach resorts, to the mouthwatering fresh seafood and delicacies.",
+            "slug": "batam",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Sembilang National Park: Sumatra's Wildlife Sanctuary",
+            "description": "Explore the wildlife sanctuary of Sembilang National Park in Sumatra. Immerse in diverse ecosystems and spot rare species in their natural habitat.",
+            "slug": "sembilang-national-park-sumatras-wildlife-sanctuary",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bintan",
+            "description": "Known as one of the exotic tourist destinations in Indonesia, Bintan Island offers so many different exciting activities in the island that you have to experience.",
+            "slug": "bintan",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Way Kambas National Park",
+            "description": "Officially established in 1985, the Elephant Training Center, located 9 km from the park’s Plang Ijo entrance, is an establishment aimed to protect the existence of the elephant and at the same time create mutual benefit for both the elephants and men.",
+            "slug": "way-kambas-national-park",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Banda Aceh",
+            "description": "Its auspicious position on the tip of the westernmost point of the Indonesian archipelago has made the town of Banda Aceh a recognized transit point as well as a hub for education, commerce, and government.",
+            "slug": "banda-aceh",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Rat Island (Pulau Tikus)",
+            "description": "Rocky coral reefs circle the entire circumference of the island, protecting it from erosion. Several species of coral make up these formations and even more marine ecosystems are supported within this reef.",
+            "slug": "rat-island-pulau-tikus",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Mount Kerinci",
+            "description": "Mt Kerinci is the highest mountain on the island of Sumatra and it is popular with mountain climbers. The nearest village and climber’s base is Kersik Tuo, near Kayu Aro, Kerinci. The route is marked by signs, posted at half kilometer intervals.",
+            "slug": "mount-kerinci",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "The Natuna Islands",
+            "description": "The Natuna islands together with the Anambas Archipelago are Indonesia’s outermost northern border islands in the Riau Archipelago, on the west side of the South China Sea.  Strategically located between Singapore, the Malaysian Peninsula on one side and East Malaysia on Borneo on the other, the two island-clusters are now fast growing into a favorite playground for yachters, more so ever since Indonesia eased entry regulations for yachts to sail into Indonesian seas.",
+            "slug": "the-natuna-islands",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Berastagi",
+            "description": "The picturesque town of Berastagi in the beautiful Karo highlands, is 70 km from Medan on the way to Lake Toba. Situated at an altitude of 1,300 meters, the town has a cool climate, ranging between 17-20 degrees Centigrade, making a refreshing break from the heat of the city.",
+            "slug": "berastagi",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Jambi",
+            "description": "The city of Jambi straddles the long and wide Batanghari river that has its source in the Bukit Barisan range, at Danau di Atas and Danau di Bawah (the Upper and Lower Lakes) in the Minangkabau highlands of West Sumatra near Lake Singkarak.",
+            "slug": "jambi",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bengkulu City",
+            "description": "Bengkulu Province is easily accessible by land, air and sea transportation. You can catch regular buses directly from Medan, Padang or Jakarta. Flight arrives there times a day. Domestic ships from Jakarta, Padang and Medan stop by in Baai Harbor, Bengkulu.",
+            "slug": "bengkulu-city",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "The Town of Curup",
+            "description": "The Town of Curup is located approximately 85 km away from Bengkulu city. The town sits at an altitude of between 100-1,000 meters above sea level in the highlands of the Bukit Barisan Mountain Range.",
+            "slug": "the-town-of-curup",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Pangkalpinang",
+            "description": "Located on the eastern coast of Bangka Island, Pangkalpinang is the island’s largest city and capital of the Province of Bangka-Belitung Islands. Aside from its role as the center of the provincial government, economic, and commercial activities, Pangkalpinang serves as gateway for visitors who wish to explore the enchanting beauty of Bangka and Belitung Islands.",
+            "slug": "pangkalpinang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Palembang",
+            "description": "The second largest city in Sumatra after Medan, formerly the centre of the Sriwijaya empire. Palembang is situated along the Musi River, which known as the wealthy trade hub as well as the center for Buddhist learnings.",
+            "slug": "palembang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Bukittinggi",
+            "description": "Many visitors come to Bukittinggi to visit the remarkable Ngarai Sianok Canyon where giant rock cliff faces, rugged trees which grow on top and the dramatic surrounding mountains make this canyon a spellbinding view.",
+            "slug": "bukittinggi",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Payakumbuh",
+            "description": "Payakumbuh is the capital of the Limapuluh Kota Regency. Covering a total area of 80.42 Km squre, it is recognized as the second largest city after Padang in West Sumatra.",
+            "slug": "payakumbuh",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Padang",
+            "description": "Padang is the gateway to Minang highlands. Famous for their cuisines rich in spices and unique in their way of serving. Plan a trip to see all this with your own eyes!",
+            "slug": "padang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Tanjung Balai Karimun",
+            "description": "Located in the west of Singapore and Batam, the Karimun Islands stand guard south of the busy shipping lane that is the Straits of Malacca. Together with Batam and Bintan, Karimun forms part of the Batam-Bintan-Karimun Free Trade Zone, which is being developed into an industrial and tourism region.",
+            "slug": "tanjung-balai-karimun",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Tanjung Pinang",
+            "description": "Tanjung Pinang is a good start for those who want to explore the richness of Riau Islands. Feast on its culinary trademark of seafood and enjoy the beginning of your tropical holiday!",
+            "slug": "tanjung-pinang",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Pelalawan",
+            "description": "Pelalawan is a Regency of the Riau Province, currently one of the richest provinces in Indonesia due to its abundance of natural resources, making it the economic hub of the island of Sumatra. Pelalawan spans a variety of geographical conditions: dense forests, expansive plantations, peat bog plains and alluvial rivers.",
+            "slug": "pelalawan",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Sibolga",
+            "description": "The town of Sibolga is the main sea port on the west coast of the province of North Sumatra. Ever since the early centuries AD, Indian and Arab merchants used to sail across the Indian Ocean to Sumatra using this western gateway.",
+            "slug": "sibolga",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Medan",
+            "description": "Medan is capital of North Sumatra. Medan is also known for scrumptious delectable culinary spots, rich with many flavours. Want to explore the nature? Enjoy the beautiful Lake Toba and the Samosir Island.",
+            "slug": "medan",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Takengon",
+            "description": "Takengon is a 100 km town from the westernmost edge with population no more than 230,000. Takengon is the capital of Central Aceh district. It sits to offer you a handful of rareness you must see. The food is unique and it’s worth noting.",
+            "slug": "takengon",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Lake Toba",
+            "description": "Lake Toba is located in North Sumatra and is one of the natural wonders of the world. This is the largest lake in Southeast Asia and one of the deepest lakes in the world. The right place to visit, sit back relax and absorb the beautiful pristine scenery.",
+            "slug": "lake-toba",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Weh Island",
+            "description": "Situated at the entrance way of the Malacca Strait, Weh Island is naturally untouched despite its small size and convenient access. It is another garden often forgotten. Diving in Weh Island is a well established recreational activity.",
+            "slug": "weh-island",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Pekanbaru",
+            "description": "Pekanbaru is the capital of Riau Province and is the third largest city on the island of Sumatera, after Medan in the North and Palembang in South Sumatra. Lately the Riau province has come into international limelight when UK’s Steve King broke his own world record by surfing up the Kampar river on the Bono bore, covering the length of 20.65 km (12.8 miles) in 1 hour and 4 minutes, setting a new World Record for the Longest, Continuous Bore Ride.",
+            "slug": "pekanbaru",
+            "created_at": "2023-10-28T16:04:37.319192+00:00"
+        },
+        {
+            "name": "Samosir Island",
+            "description": "Experience the breathtaking allure of Samosir Island. A haven of natural beauty awaits, where landscapes and culture merge in perfect harmony.",
+            "slug": "samosir-island",
+            "created_at": "2023-12-11T07:41:11.467585+00:00"
+        },
+        {
+            "name": "Menjangan Island",
+            "description": "Discover Menjangan Island: West Bali's hidden dive gem in Bali Barat National Park, an underwater paradise for diving enthusiasts",
+            "slug": "menjangan-island",
+            "created_at": "2023-12-11T07:46:46.340039+00:00"
+        },
+        {
+            "name": "Ulun Danu Beratan",
+            "description": "Explore the iconic Ulun Danu Beratan Temple on Lake Beratan, nestled in the scenic Bedugul Highlands. A spiritual and picturesque destination awaits",
+            "slug": "ulun-danu-beratan",
+            "created_at": "2023-12-11T07:50:26.248555+00:00"
+        },
+        {
+            "name": "Pura Besakih",
+            "description": "Experience the spiritual aura of Pura Besakih, Bali's revered Mother Temple. Discover ancient traditions and breathtaking architecture in this sacred haven",
+            "slug": "pura-besakih",
+            "created_at": "2023-12-11T07:53:47.564516+00:00"
+        },
+        {
+            "name": "Lovina Beach",
+            "description": "Discover the magic of Lovina Beach in North Bali, where bottle-nosed dolphins playfully grace the waves. An enchanting coastal escape awaits",
+            "slug": "lovina-beach",
+            "created_at": "2023-12-11T07:57:38.627072+00:00"
+        },
+        {
+            "name": "Traditional Houses in Bali",
+            "description": "Explore the profound Asta Kosala Kosali philosophy in Bali's traditional houses, blending mystique charm with rich cultural significance",
+            "slug": "traditional-houses-in-bali",
+            "created_at": "2023-12-11T08:01:31.706412+00:00"
+        },
+        {
+            "name": "Suluban Beach",
+            "description": "Escape to tranquil Suluban Beach in Bali for an authentic surfer’s paradise. Experience stunning sunsets, leisure activities, and rich culture",
+            "slug": "suluban-beach",
+            "created_at": "2023-12-11T08:06:12.711731+00:00"
+        },
+        {
+            "name": "Candi Gunung Kawi",
+            "description": "Explore Bali's Candi Gunung Kawi Temple: A unique ancient complex carved into cliffs, holding cultural significance and historic charm",
+            "slug": "candi-gunung-kawi",
+            "created_at": "2023-12-11T08:10:24.536901+00:00"
+        },
+        {
+            "name": "Jatiluwih Rice Terraces",
+            "description": "Visit the beautiful island of Bali, travel to its highlands, and you cannot but be amazed by the beauty of the thousands of hectares of lush green paddy fields that cascade in terraces from the upper reaches of volcanoes down to the deep valleys below as if sculpted from the mountain side. ",
+            "slug": "jatiluwih-rice-terraces",
+            "created_at": "2023-12-11T08:15:03.411219+00:00"
+        },
+        {
+            "name": "Jimbaran Beach",
+            "description": "\ufeffFor those looking for a more relaxed alternative to the hustle and bustle that is Kuta and Seminyak then the area of Jimbaran is perfect for you.",
+            "slug": "jimbaran-beach",
+            "created_at": "2023-12-11T08:18:40.483306+00:00"
+        },
+        {
+            "name": "The Barong and the Kris Dance",
+            "description": "The wondrous island of Bali is not only blessed with fascinating beaches and outstanding landscapes, it also has an amazing traditional culture that remains well preserved, highlighting the daily life of its people. ",
+            "slug": "the-barong-and-the-kris-dance",
+            "created_at": "2023-12-11T08:24:04.350095+00:00"
+        },
+        {
+            "name": "Subak Bali",
+            "description": "Visit Bali, travel to its highlands, and you can not but be amazed by the beauty of the thousands of hectares of lush green paddy fields that cascade in terraces from the upper reaches of volcanoes down to the deep valleys below as if sculpted from the mountain side.",
+            "slug": "subak-bali",
+            "created_at": "2023-12-11T08:29:50.908298+00:00"
+        },
+        {
+            "name": "Tirta Empul",
+            "description": "Pura Tirta Empul is where you can experience the culture of Balinese Hindu by bathing in holy springs. This cultural site in Bali is one you wouldn't want to miss!",
+            "slug": "tirta-empul",
+            "created_at": "2023-12-11T08:32:01.874474+00:00"
+        },
+        {
+            "name": "Borobudur",
+            "description": "As the world’s biggest Buddhist monument, Borobudur is a must-see World Heritage Site. Check out more secrets about this grandiose ancient site!",
+            "slug": "borobudur",
+            "created_at": "2023-12-11T08:36:57.260169+00:00"
+        },
+        {
+            "name": "Mandalika",
+            "description": "This is Mandalika, once a surfers’ best-kept secret, now it has emerged as the Lombok’s capital of leisure. Mandalika shouts heaven from all of its enchanting corners.",
+            "slug": "mandalika",
+            "created_at": "2023-12-11T08:39:28.721017+00:00"
+        },
+        {
+            "name": "Gili Meno",
+            "description": "Gili Meno: Secluded paradise in Indonesia's Gili Islands. Experience tranquility, crystal-clear waters, and pristine beaches on this romantic getaway.",
+            "slug": "gili-meno",
+            "created_at": "2023-12-11T08:46:10.282721+00:00"
+        },
+        {
+            "name": "Sade Village",
+            "description": "Discover the untouched tradition and culture of Sade Village on Lombok Island. Embrace its unique customs and serene atmosphere",
+            "slug": "sade-village",
+            "created_at": "2023-12-11T08:48:00.659444+00:00"
+        },
+        {
+            "name": "Lombok Elephant Park",
+            "description": "Discover Lombok Elephant Park, a haven for gentle giants amidst stunning landscapes. Explore Indonesia's premier tourist destination",
+            "slug": "lombok-elephant-park",
+            "created_at": "2023-12-11T08:49:47.714234+00:00"
+        },
+        {
+            "name": "Danau Segara Anak Rinjani",
+            "description": "Explore Mt. Rinjani's mystifying Danau Segara Anak. Witness volcanic beauty, stunning views, and therapeutic hot springs in East Indonesia",
+            "slug": "danau-segara-anak-rinjani",
+            "created_at": "2023-12-11T08:52:08.708418+00:00"
+        },
+        {
+            "name": "Raja Ampat",
+            "description": "Raja Ampat is situated off the northwest tip of Bird’s Head Peninsula on Papua, the most eastern Island of the Indonesian Archipelago. You will find a pristine paradise far from the view-blocking skyscrapers, dense and hectic concrete jungles.",
+            "slug": "raja-ampat",
+            "created_at": "2023-12-11T08:55:03.207644+00:00"
+        },
+        {
+            "name": "Sawinggrai Village",
+            "description": "Sawinggrai Village in Raja Ampat, Indonesia, is renowned for its beauty and conservation efforts, especially for the majestic Cenderawasih bird-of-paradise.&quot;",
+            "slug": "sawinggrai-village",
+            "created_at": "2023-12-11T09:03:05.596373+00:00"
+        },
+        {
+            "name": "Misool Island",
+            "description": "Escape to Misool Island, a tropical paradise in Raja Ampat. Immerse in pristine beauty, vibrant coral reefs, and the tranquility of this island haven",
+            "slug": "misool-island",
+            "created_at": "2023-12-11T09:05:03.372921+00:00"
+        },
+        {
+            "name": "Kofiau Island",
+            "description": "Explore the world's coral diversity on Kofiau Island. Immerse in the underwater wonders of vibrant reefs and marine life. A diver's paradise awaits! ",
+            "slug": "kofiau-island",
+            "created_at": "2023-12-11T09:07:07.387348+00:00"
+        },
+        {
+            "name": "Waigeo Island",
+            "description": "Among the wonderful Raja Ampat Islands, Waigeo is the largest of the archipelago’s four main islands. Waigeo is also known as Amberi, or Waigiu, located in the West Papua province near the town of Sorong.",
+            "slug": "waigeo-island",
+            "created_at": "2023-12-11T09:09:10.099285+00:00"
+        },
+        {
+            "name": "Wayag Island",
+            "description": "Wayag Island is one of the islands within the Raja Ampat district in the province of West Papua. The island is known for its beautiful atolls and amazing underwater life covering a total area of 155,000 hectares, about 383,013.3 acres",
+            "slug": "wayag-island",
+            "created_at": "2023-12-11T09:11:06.1355+00:00"
+        },
+        {
+            "name": "Morotai Island",
+            "description": "Discover the historical significance of Morotai, the WWII strategic base. Explore remnants of military activities and the island's rich wartime heritage.",
+            "slug": "morotai-island",
+            "created_at": "2023-12-11T09:13:43.349702+00:00"
+        },
+        {
+            "name": "Weda Bay",
+            "description": "The little known underwater sea gardens of Weda Bay in Halmahera, in the province of North Maluku, recently emerged into world’s media limelight when the rare Walking Shark (Hemisayllium halmahera) was discovered in this remote area. ",
+            "slug": "weda-bay",
+            "created_at": "2023-12-11T09:15:03.264513+00:00"
+        },
+        {
+            "name": "Eco Beach Tent Belitung",
+            "description": "The Nomadic Tourism Concept as launched by Tourism Minister, Arief Yahya in March 2018, that underscores the high mobility of millennial tourists today, has taken root in many Indonesian destinations. ",
+            "slug": "eco-beach-tent-belitung",
+            "created_at": "2023-12-11T09:17:48.433212+00:00"
+        },
+        {
+            "name": "Lengkuas Island",
+            "description": "With a total area of less than 1 hectare, Lengkuas is located within the Sijuk sub-district, Belitung Regency. While it may be small in size nevertheless it offers a wide range of splendors.",
+            "slug": "lengkuas-island",
+            "created_at": "2023-12-11T09:19:18.648467+00:00"
+        },
+        {
+            "name": "Tanjung Kelayang",
+            "description": "Discover the epitome of bliss at our tropical paradise resort in beautiful Belitung Island. Immerse in pristine beaches and unparalleled luxury.",
+            "slug": "tanjung-kelayang",
+            "created_at": "2023-12-15T08:16:26.183184+00:00"
+        }
+    ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

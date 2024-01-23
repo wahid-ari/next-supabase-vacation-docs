@@ -1,0 +1,80 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Total Destination by Category
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/statistics/destination-by-category</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+[
+    {
+        "id": 13,
+        "label": "City",
+        "total": 60
+    },
+    {
+        "id": 1,
+        "label": "Architecture",
+        "total": 48
+    },
+    {
+        "id": 2,
+        "label": "Beach",
+        "total": 30
+    },
+    {
+        "id": 8,
+        "label": "Ocean",
+        "total": 29
+    },
+    {
+        "id": 7,
+        "label": "Island",
+        "total": 25
+    },
+    {
+        "id": 5,
+        "label": "Forest",
+        "total": 23
+    },
+    {
+        "id": 6,
+        "label": "Park",
+        "total": 16
+    },
+    {
+        "id": 4,
+        "label": "Mountain",
+        "total": 14
+    },
+    {
+        "id": 9,
+        "label": "Underwater",
+        "total": 14
+    },
+    {
+        "id": 11,
+        "label": "Camping",
+        "total": 12
+    }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

@@ -27,43 +27,45 @@ Registered users can login using the API described below. The login operation re
 	var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
-var raw = JSON.stringify({
-"username": "username",
-"password": "secret"
-});
+	var raw = JSON.stringify({
+		"username": "username",
+		"password": "secret"
+	});
 
-var requestOptions = {
-method: 'POST',
-headers: myHeaders,
-body: raw,
-redirect: 'follow'
-};
+	var requestOptions = {
+		method: 'POST',
+		headers: myHeaders,
+		body: raw,
+		redirect: 'follow'
+	};
 
-fetch("/api/login", requestOptions)
-.then(response => response.text())
-.then(result => console.log(result))
-.catch(error => console.log('error', error));
-`
-	</CodeGroup.Item>
-	<CodeGroup.Item>
-	`python copy
-import http.client
-import json
-
-conn = http.client.HTTPSConnection("localhost", 3000)
-payload = json.dumps({
-"username": "username",
-"password": "secret"
-})
-headers = {
-'Content-Type': 'application/json'
-}
-conn.request("POST", "/api/login", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
+	fetch("/api/login", requestOptions)
+		.then(response => response.text())
+		.then(result => console.log(result))
+		.catch(error => console.log('error', error));
 
 ````
+	</CodeGroup.Item>
+	<CodeGroup.Item>
+	```python copy
+	import http.client
+	import json
+
+	conn = http.client.HTTPSConnection("localhost", 3000)
+	payload = json.dumps({
+		"username": "username",
+		"password": "secret"
+	})
+	headers = {
+		'Content-Type': 'application/json'
+	}
+	conn.request("POST", "/api/login", payload, headers)
+	res = conn.getresponse()
+	data = res.read()
+	print(data.decode("utf-8"))
+
+````
+
 </CodeGroup.Item>
 
 </CodeGroup>
@@ -78,7 +80,7 @@ print(data.decode("utf-8"))
   "type": "admin",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJBZG1pbiIsImlhdCI6MTY3MzU5MDY1NH0.z8Bc26vhWGICs78KyujSWXY5S98qoccYl9pBVWEFYBY"
 }
-````
+```
 
 **Response :**
 

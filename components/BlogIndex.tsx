@@ -10,7 +10,7 @@ export default function BlogIndex({ more = 'Read more' }: { more: string }) {
         <h3 className='text-2xl font-medium text-neutral-800'>
           <Link
             href={page.route}
-            className='text-neutral-900 no-underline transition-all hover:text-orange-500 dark:text-white dark:hover:text-orange-500'
+            className='text-neutral-900 no-underline transition-all hover:text-sky-500 dark:text-white dark:hover:text-sky-500'
           >
             {page.meta?.title || page.frontMatter?.title || page.name}
           </Link>
@@ -19,7 +19,7 @@ export default function BlogIndex({ more = 'Read more' }: { more: string }) {
           {page.frontMatter?.description}{' '}
           <Link
             href={page.route}
-            className='text-orange-500 transition-all duration-300 hover:text-orange-600 hover:underline'
+            className='text-sky-500 transition-all duration-300 hover:text-sky-600 hover:underline'
           >
             {more + ' ➔'}
           </Link>
@@ -39,12 +39,12 @@ export default function BlogIndex({ more = 'Read more' }: { more: string }) {
 {
   /* <Link href={page.route} passHref key={index + 1}>
   <div className="mt-8 mb-10 group">
-    <h3 className="text-2xl text-neutral-800 font-medium dark:text-white group-hover:text-orange-500 dark:group-hover:text-orange-500 transition-all duration-300">
+    <h3 className="text-2xl text-neutral-800 font-medium dark:text-white group-hover:text-sky-500 dark:group-hover:text-sky-500 transition-all duration-300">
       {page.meta?.title || page.frontMatter?.title || page.name}
     </h3>
     <p className="opacity-80 !mt-0 pt-3">
       {page.frontMatter?.description}{" "}
-      <Link href={page.route} className="text-orange-500 hover:text-orange-600 transition-all">
+      <Link href={page.route} className="text-sky-500 hover:text-sky-600 transition-all">
         {more + " ➔"}
       </Link>
     </p>

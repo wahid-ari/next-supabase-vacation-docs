@@ -48,23 +48,22 @@ Logged in users can logout using the API described below. The logout operation r
     <CodeGroup.Item>
     ```python copy
     import http.client
+    import json
 
-import json
+    conn = http.client.HTTPSConnection("localhost", undefined)
+    payload = json.dumps({
+      "user_id": 2,
+      "token": "mdLDoIfP7zznp4cqQJ0ZHm-B1QxYA1y43DDqn2uYPmk"
+    })
+    headers = {
+      'Content-Type': 'application/json'
+    }
+    conn.request("POST", "/api/logout", payload, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
 
-conn = http.client.HTTPSConnection("localhost", undefined)
-payload = json.dumps({
-"user_id": 2,
-"token": "mdLDoIfP7zznp4cqQJ0ZHm-B1QxYA1y43DDqn2uYPmk"
-})
-headers = {
-'Content-Type': 'application/json'
-}
-conn.request("POST", "/api/logout", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
-
-````
+```
 </CodeGroup.Item>
 
 </CodeGroup>

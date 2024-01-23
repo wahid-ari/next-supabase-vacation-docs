@@ -1,52 +1,60 @@
 import Badge from '@/components/Badge';
 import BadgeOutline from '@/components/BadgeOutline';
 
-# Get Sitemap
+# Total Destination by Island
 
 To get the data in the specified collection. If no parameters are passed, it lists all of them.
 Otherwise, it lists the documents in the collection matching the specified parameters:
 
 **Method :** <Badge variant="success">GET</Badge>
 
-**URL :** <Badge variant="dark">/api/sitemap</Badge>
+**URL :** <Badge variant="dark">/api/statistics/destination-by-island</Badge>
 
 **Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
 
 ```json
-{
-  "authors": [
+[
     {
-      "slug": "suzanne-collins"
+        "id": 6,
+        "label": "Sumatera",
+        "total": 28
     },
     {
-      "slug": "jk-rowling"
-    }
-  ],
-  "books": [
-    {
-      "slug": "the-hunger-games"
+        "id": 1,
+        "label": "Jawa",
+        "total": 27
     },
     {
-      "slug": "harry-potter-and-the-order-of-the-phoenix"
-    }
-  ],
-  "genres": [
-    {
-      "slug": "art"
+        "id": 5,
+        "label": "Sulawesi",
+        "total": 13
     },
     {
-      "slug": "biography"
-    }
-  ],
-  "tags": [
-    {
-      "slug": "love"
+        "id": 2,
+        "label": "Bali",
+        "total": 12
     },
     {
-      "slug": "life"
+        "id": 4,
+        "label": "Kalimantan",
+        "total": 10
+    },
+    {
+        "id": 7,
+        "label": "Nusa Tenggara",
+        "total": 6
+    },
+    {
+        "id": 8,
+        "label": "Papua",
+        "total": 4
+    },
+    {
+        "id": 3,
+        "label": "Maluku",
+        "total": 2
     }
-  ]
-}
+]
 ```
 
 **Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>

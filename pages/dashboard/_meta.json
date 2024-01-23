@@ -1,8 +1,9 @@
 {
   "total-data": "Get All Total Data",
-  "total-book": "Get Total Book",
-  "total-author": "Get Total Author",
-  "total-quote": "Get Total Quote",
-  "total-genre": "Get Total Genre",
-  "total-tag": "Get Total Tag"
+  "total-destination": "Get Total Destination",
+  "total-category": "Get Total Category",
+  "total-province": "Get Total Province",
+  "total-island": "Get Total Island",
+  "total-video": "Get Total Video",
+  "total-inspiration": "Get Total Inspiration"
 }
