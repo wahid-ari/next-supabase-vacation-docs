@@ -1,0 +1,73 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+import Param from '@/components/Param';
+
+# Create Category
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge>POST</Badge>
+
+**URL :** <Badge variant="dark">/api/category</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+	"name": "New Category",
+	"image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500"
+}
+```
+
+<Param name='name' type='string' required={true}>
+  Category name.
+</Param>
+<Param name="image_url" type="string" required={true}>
+	Category image URL
+</Param>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "message": "Success add category"
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 - Unprocessable Content</BadgeOutline>
+
+```json
+{
+    "error": [
+        {
+            "code": "too_small",
+            "minimum": 1,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Name is required",
+            "path": [
+                "name"
+            ]
+        },
+        {
+            "code": "too_small",
+            "minimum": 1,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Image URL is required",
+            "path": [
+                "image_url"
+            ]
+        }
+    ]
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

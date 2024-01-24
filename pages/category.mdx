@@ -1,0 +1,45 @@
+import ApiPlayground from "@/components/ApiPlayground";
+import Param from "@/components/Param";
+
+# Category API Playground
+
+The API playground is an interactive environment to make requests and preview an API endpoint.
+
+### All Category
+
+<ApiPlayground method="GET" endpoint="category">
+	Tes endpoint `Category`
+</ApiPlayground>
+
+### Single Category by ID
+
+<ApiPlayground method="GET" endpoint="category" param={true} paramName="id">
+	Tes endpoint `category` with `id` as param
+	<Param name="id" type="number">
+		Category ID
+	</Param>
+</ApiPlayground>
+
+### Single Category by SLUG
+
+<ApiPlayground method="GET" endpoint="category" param={true} paramName="slug">
+	Tes endpoint `category` with `slug` as param
+	<Param name="slug" type="string">
+		Category SLUG
+	</Param>
+</ApiPlayground>
+
+### Detail Destination SEO
+
+<ApiPlayground method='GET' endpoint='category?seo=true' param={true} paramName='slug'>
+  Tes endpoint `category` with `slug` and `seo=true` as param
+  <Param name='slug' type='string'>
+    category SLUG
+  </Param>
+</ApiPlayground>
+
+### Total Destination by Category
+
+<ApiPlayground method='GET' endpoint='category/total-destination'>
+  Tes endpoint `category/total-destination`
+</ApiPlayground>

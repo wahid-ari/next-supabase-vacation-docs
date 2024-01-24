@@ -1,0 +1,75 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get Detail Category
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/category?id=(id)</Badge>
+
+**URL :** <Badge variant="dark">/api/category?slug=(slug)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "id": 2,
+  "name": "Beach",
+  "created_at": "2023-10-22T08:38:55.639635+00:00",
+  "image_url": "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&q=80&w=500",
+  "slug": "beach",
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Kintamani: Bali's Scenic Gem",
+      "slug": "kintamani-balis-scenic-gem",
+      "location": "Kintamani, Bali",
+      "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/bali-nusa-tenggara/Kintamani.jpg",
+      "description": "Explore the scenic gem of Kintamani in Bali. Marvel at Mount Batur's beauty, serene Lake Batur, and captivating volcanic landscapes",
+      "vacation_island": {
+        "id": 2,
+        "name": "Bali",
+        "slug": "bali"
+      },
+      "vacation_province": {
+        "id": 15,
+        "name": "Bali",
+        "slug": "bali"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Bali",
+      "slug": "bali",
+      "location": "Bali, Indonesia",
+      "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revisi-2020/destinations-thumbnail/Bali-Thumbnail.jpg",
+      "description": "Bali is also known as the Land of the Gods with dramatic dances and colorful ceremonies, to its luxurious beach resorts with exciting nightlife and famous for surfers’ paradise.",
+      "vacation_island": {
+        "id": 2,
+        "name": "Bali",
+        "slug": "bali"
+      },
+      "vacation_province": {
+        "id": 15,
+        "name": "Bali",
+        "slug": "bali"
+      }
+    }
+  ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

@@ -2,56 +2,40 @@ import Badge from '@/components/Badge';
 import BadgeOutline from '@/components/BadgeOutline';
 import Param from '@/components/Param';
 
-# Update Author
+# Update Category
 
 To edit the data in the specified collection with the specified parameters.
 When a JSON object is saved, the object properties are automatically added to the collection you specified.
 
 **Method :** <Badge variant="info">PUT</Badge>
 
-**URL :** <Badge variant="dark">/api/author</Badge>
+**URL :** <Badge variant="dark">/api/category</Badge>
 
 **Body :** <Badge variant="purple">JSON</Badge>
 
 ```json
 {
-  "id": 289,
-  "name": "New Author Edit",
-  "link": "New Author Link Edit",
-  "image": "Image Author Edit",
-  "born": "Born Author Edit",
-  "web": "Web Author Edit",
-  "bio": "Bio Author Edit"
+  "id": 1,
+  "name": "Edit Category",
+  "image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500"
 }
 ```
 
 <Param name='id' type='number' required={true}>
-  Author ID.
+  Category ID.
 </Param>
 <Param name='name' type='string' required={true}>
-  Name of actor.
+  Category name.
 </Param>
-<Param name='link' type='string'>
-  Author Goodread link
-</Param>
-<Param name='image' type='string'>
-  Author Image URL
-</Param>
-<Param name='born' type='string'>
-  Author Location
-</Param>
-<Param name='web' type='string'>
-  Author Web URL
-</Param>
-<Param name='bio' type='string'>
-  Author bio
+<Param name="image_url" type="string" required={true}>
+	Category image URL
 </Param>
 
 **Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
 
 ```json
 {
-  "message": "Success update author"
+  "message": "Success update category"
 }
 ```
 
@@ -59,7 +43,30 @@ When a JSON object is saved, the object properties are automatically added to th
 
 ```json
 {
-  "error": "Name required"
+    "error": [
+        {
+            "code": "too_small",
+            "minimum": 1,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Name is required",
+            "path": [
+                "name"
+            ]
+        },
+        {
+            "code": "too_small",
+            "minimum": 1,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Image URL is required",
+            "path": [
+                "image_url"
+            ]
+        }
+    ]
 }
 ```
 

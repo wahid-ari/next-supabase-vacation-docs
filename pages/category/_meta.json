@@ -1,0 +1,9 @@
+{
+  "list": "Get All Category",
+  "total": "Get Total Destination by Category",
+  "detail": "Get Detail Category",
+  "seo": "Get Detail SEO Category",
+  "create": "Create Category",
+  "edit": "Update Category",
+  "delete": "Delete Category"
+}

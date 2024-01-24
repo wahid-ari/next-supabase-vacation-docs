@@ -46,8 +46,8 @@ The API playground is an interactive environment to make requests and preview an
 
 ### Detail Destination SEO
 
-<ApiPlayground method='GET' endpoint='destination?seo=true&limit=10' param={true} paramName='slug'>
-  Tes endpoint `destination` with `slug`, `seo=true` and `limit=10` as param
+<ApiPlayground method='GET' endpoint='destination?seo=true' param={true} paramName='slug'>
+  Tes endpoint `destination` with `slug` and `seo=true` as param
   <Param name='slug' type='string'>
     destination SLUG
   </Param>
@@ -55,9 +55,9 @@ The API playground is an interactive environment to make requests and preview an
 
 ### Destination Pagination
 
-<ApiPlayground method='GET' endpoint='destination' param={true} paramName='page'>
-  Tes endpoint `destination` with `page` as param
-  <Param name='page' type='string'>
+<ApiPlayground method='GET' endpoint='destination?limit=10' param={true} paramName='page'>
+  Tes endpoint `destination` with `page` and `limit=10` as param
+  <Param name='page' type='number'>
     destination Pagination PAGE
   </Param>
 </ApiPlayground>
