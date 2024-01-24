@@ -1,8 +1,7 @@
 {
   "index": "Introduction",
-  "login": "Login",
-  "logout": "Logout",
   "search": "Search",
+  "auth": "Auth",
   "statistics": "Statistics",
   "dashboard": "Dashboard",
   "sitemap-rss": "Sitemap & RSS",

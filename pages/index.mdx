@@ -1,22 +1,19 @@
 import {
-  ArrowLeftOnRectangleIcon,
-  ArrowRightOnRectangleIcon,
-  BookOpenIcon,
-  BuildingLibraryIcon,
-  ChartPieIcon,
-  ChatBubbleBottomCenterTextIcon,
-  FilmIcon,
-  FlagIcon,
-  MagnifyingGlassIcon,
-  RectangleStackIcon,
-  RssIcon,
-  Squares2X2Icon,
-  SwatchIcon,
-  UserGroupIcon,
-  UsersIcon,
-} from '@heroicons/react/24/outline';
+	LogInIcon,
+	LogOutIcon,
+	SearchIcon,
+	PieChartIcon,
+	LayoutGridIcon,
+	MountainSnowIcon,
+	LayoutListIcon,
+	YoutubeIcon,
+	PalmtreeIcon,
+	TentIcon,
+	MapPinIcon,
+	RssIcon,
+} from "lucide-react";
 
-import { Card, Cards } from '@/components/cards';
+import { Card, Cards } from "@/components/cards";
 
 # Introduction
 
@@ -32,11 +29,19 @@ Our searchable database includes hundreds of destination, video, inspiration, ca
 
 ![Dashboard](../public/demo.png)
 
-## Database
+## Database & Schema
 
-Import data directly from a CSV or excel spreadsheet to **Supabase**.
+- Import data directly from a CSV or excel spreadsheet to **Supabase**.
 
 [CSV](https://github.com/wahid-ari/next-supabase-vacation-docs/tree/master/public/supabase-csv)
+
+- Supabase Schema
+
+[Schema](https://github.com/wahid-ari/next-supabase-vacation-docs/tree/master/public/sql)
+
+- JSON data
+
+[JSON](https://github.com/wahid-ari/next-supabase-vacation-docs/tree/master/public/json)
 
 ## Postman
 
@@ -53,15 +58,64 @@ Export Collection v2.1 > [JSON](https://github.com/wahid-ari/next-supabase-vacat
 Discover our REST API documentation
 
 <Cards>
-  <Card icon={<ArrowRightOnRectangleIcon className='h-6 w-6' />} title='Login' href='/login' />
-  <Card icon={<ArrowLeftOnRectangleIcon className='h-6 w-6' />} title='Logout' href='/logout' />
-  <Card icon={<MagnifyingGlassIcon className='h-6 w-6' />} title='Search' href='/search' />
-  <Card icon={<ChartPieIcon className='h-6 w-6' />} title='Statistics' href='/statistics' />
-  <Card icon={<Squares2X2Icon className='h-6 w-6' />} title='Dashboard' href='/dashboard' />
-  <Card icon={<RssIcon className='h-6 w-6' />} title='Sitemap' href='/sitemap' />
-  <Card icon={<BookOpenIcon className='h-6 w-6' />} title='Book' href='/book' />
-  <Card icon={<UserGroupIcon className='h-6 w-6' />} title='Author' href='/author' />
-  <Card icon={<ChatBubbleBottomCenterTextIcon className='h-6 w-6' />} title='Quote' href='/quote' />
-  <Card icon={<SwatchIcon className='h-6 w-6' />} title='Genre' href='/genre' />
-  <Card icon={<RectangleStackIcon className='h-6 w-6' />} title='Tag' href='/tag' />
+	<Card
+		icon={<LogInIcon className="h-6 w-6" />}
+		title="Login"
+		href="/auth/login"
+	/>
+	<Card
+		icon={<LogOutIcon className="h-6 w-6" />}
+		title="Logout"
+		href="/auth/logout"
+	/>
+	<Card
+		icon={<SearchIcon className="h-6 w-6" />}
+		title="Search"
+		href="/search"
+	/>
+	<Card
+		icon={<PieChartIcon className="h-6 w-6" />}
+		title="Statistic"
+		href="/statistics"
+	/>
+	<Card
+		icon={<LayoutGridIcon className="h-6 w-6" />}
+		title="Dashboard"
+		href="/Dashboard"
+	/>
+	<Card
+		icon={<MountainSnowIcon className="h-6 w-6" />}
+		title="Destination"
+		href="/Destination"
+	/>
+	<Card
+		icon={<LayoutListIcon className="h-6 w-6" />}
+		title="Category"
+		href="/category"
+	/>
+	<Card
+		icon={<YoutubeIcon className="h-6 w-6" />}
+		title="Video"
+		href="/video"
+	/>
+	<Card
+		icon={<PalmtreeIcon className="h-6 w-6" />}
+		title="Island"
+		href="/island"
+	/>
+	<Card
+		icon={<TentIcon className="h-6 w-6" />}
+		title="Inspiration"
+		href="/inspiration"
+	/>
+	<Card
+		icon={<MapPinIcon className="h-6 w-6" />}
+		title="Province"
+		href="/province"
+	/>
+	<Card
+		icon={<RssIcon className="h-6 w-6" />}
+		title="Sitemap & RSS"
+		href="/sitemap-rss"
+	/>
 </Cards>

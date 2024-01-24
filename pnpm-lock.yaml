@@ -8,9 +8,6 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.6.5
     version: 1.7.18(react-dom@18.2.0)(react@18.2.0)
-  '@heroicons/react':
-    specifier: ^2.0.12
-    version: 2.1.1(react@18.2.0)
   '@vercel/og':
     specifier: ^0.1.0
     version: 0.1.0
@@ -26,6 +23,9 @@ dependencies:
   json-format-highlight:
     specifier: ^1.0.4
     version: 1.0.4
+  lucide-react:
+    specifier: ^0.314.0
+    version: 0.314.0(react@18.2.0)
   next:
     specifier: ^13.1.6
     version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -158,14 +158,6 @@ packages:
       client-only: 0.0.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@heroicons/react@2.1.1(react@18.2.0):
-    resolution: {integrity: sha512-JyyN9Lo66kirbCMuMMRPtJxtKJoIsXKS569ebHGGRKbl8s4CtUfLnyKJxteA+vIKySocO4s1SkTkGS4xtG/yEA==}
-    peerDependencies:
-      react: '>= 16'
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array@0.11.14:
@@ -3273,6 +3265,14 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /lucide-react@0.314.0(react@18.2.0):
+    resolution: {integrity: sha512-c2zOW7TOyKxPCaSs1og2lFdoI3SR4iii3yrZJU2Zpdc78nOw4fUmrcFNultaCiwZcr4CyiKdzjMdvKNlBBk+UQ==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /markdown-extensions@1.1.1:
     resolution: {integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==}

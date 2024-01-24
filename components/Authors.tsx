@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
-import { CalendarDaysIcon } from '@heroicons/react/24/outline';
+import { CalendarDaysIcon } from 'lucide-react';
 
 export default function Authors({ date, children }: { date?: string; children?: ReactNode }) {
   return (
     <div className='mb-10 mt-4 flex flex-wrap items-center gap-x-1 gap-y-2 text-sm text-neutral-500 dark:text-gray-400'>
-      <CalendarDaysIcon className='h-5 w-5' /> {date} by {children}
+      <CalendarDaysIcon className='h-4 w-4' /> {date} by {children}
     </div>
   );
 }

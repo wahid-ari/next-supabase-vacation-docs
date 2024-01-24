@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Disclosure, Transition } from '@headlessui/react';
-import { ChevronRightIcon } from '@heroicons/react/24/solid';
+import { ChevronRightIcon } from 'lucide-react';
 import cn from 'clsx';
 
 type Props = {

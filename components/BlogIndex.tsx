@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CalendarDaysIcon } from '@heroicons/react/24/outline';
+import { CalendarDaysIcon } from 'lucide-react';
 import { getPagesUnderRoute } from 'nextra/context';
 
 export default function BlogIndex({ more = 'Read more' }: { more: string }) {
@@ -26,7 +26,7 @@ export default function BlogIndex({ more = 'Read more' }: { more: string }) {
         </p>
         {page.frontMatter?.date ? (
           <p className='!mt-0 flex items-center gap-1 pt-2.5 text-sm text-gray-600 dark:text-neutral-400'>
-            <CalendarDaysIcon className='h-5 w-5' />
+            <CalendarDaysIcon className='h-4 w-4' />
             {page.frontMatter.date}
           </p>
         ) : null}
