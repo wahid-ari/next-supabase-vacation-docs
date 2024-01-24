@@ -10,7 +10,8 @@
   "category": "Category",
   "island": "Island",
   "province": "Province",
-  "tag": "Tag",
+  "video": "Video",
+  "inspiration": "Inspiration",
   "updates": "Updates",
   "blog": {
     "title": "Blog",

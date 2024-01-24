@@ -1,0 +1,96 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+import Param from '@/components/Param';
+
+# Create Inspiration
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge>POST</Badge>
+
+**URL :** <Badge variant="dark">/api/inspiration</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+	"title": "New Inspiration",
+	"image_url": "https://images.unsplash.com/photo-1571366343168-631c5bcca7a4?q=80&w=720",
+	"content": "Inspiration Content",
+	"url": "https://www.instagram.com/p/CvMgJUPBZz3",
+	"latlng": [-2.3723687086440504, 113.11523437500001]
+}
+```
+
+<Param name='title' type='string' required={true}>
+    Inspiration title.
+</Param>
+<Param name="image_url" type="string" required={true}>
+    Inspiration image URL
+</Param>
+<Param name="content" type="string" required={true}>
+    Inspiration content
+</Param>
+<Param name="url" type="string">
+    Inspiration URL
+</Param>
+<Param name="latlng" type="array of double">
+	Inspiration latitude and longtitude. 
+	```json
+	[latitude (-2.372), longtitude (113.115)]
+	```
+</Param>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+  "message": "Success add inspiration"
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 - Unprocessable Content</BadgeOutline>
+
+```json
+{
+    "message": [
+        {
+            "code": "too_small",
+            "minimum": 1,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Title is required",
+            "path": [
+                "title"
+            ]
+        },
+        {
+            "validation": "url",
+            "code": "invalid_string",
+            "message": "Invalid Image URL",
+            "path": [
+                "image_url"
+            ]
+        },
+        {
+            "code": "too_small",
+            "minimum": 50,
+            "type": "string",
+            "inclusive": true,
+            "exact": false,
+            "message": "Content must be 50 or more characters long",
+            "path": [
+                "content"
+            ]
+        }
+    ]
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

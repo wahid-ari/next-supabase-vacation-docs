@@ -1,0 +1,62 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get All Video
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/video</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+[
+    {
+        "id": 1,
+        "title": "The Heartbeat of Toba",
+        "video_url": "https://youtu.be/_IzOqfrLc0o",
+        "hd_quality": true,
+        "vacation_island": {
+            "id": 6,
+            "name": "Sumatera",
+            "slug": "sumatera"
+        },
+        "vacation_province": {
+            "id": 2,
+            "name": "Sumatera Utara",
+            "slug": "sumatera-utara"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Mandalika - Where the Waves Collide",
+        "video_url": "https://youtu.be/xYTzw8mD1tg",
+        "hd_quality": true,
+        "vacation_island": {
+            "id": 7,
+            "name": "Nusa Tenggara",
+            "slug": "nusa-tenggara"
+        },
+        "vacation_province": {
+            "id": 18,
+            "name": "Kalimantan Barat",
+            "slug": "kalimantan-barat"
+        }
+    }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

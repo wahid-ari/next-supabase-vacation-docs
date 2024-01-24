@@ -1,0 +1,81 @@
+import Badge from "@/components/Badge";
+import BadgeOutline from "@/components/BadgeOutline";
+import Param from "@/components/Param";
+
+# Create Video
+
+To create the data in the specified collection with the specified parameters.
+When a JSON object is saved, the object properties are automatically added to the collection you specified.
+
+**Method :** <Badge>POST</Badge>
+
+**URL :** <Badge variant="dark">/api/video</Badge>
+
+**Body :** <Badge variant="purple">JSON</Badge>
+
+```json
+{
+	"title": "New Video",
+	"video_url": "https://youtu.be/_IzOqfrLc0o",
+	"hd_quality": true,
+	"island_id": 1,
+	"province_id": 1
+}
+```
+
+<Param name="title" type="string" required={true}>
+	Title of video.
+</Param>
+<Param name="video_url" type="string" required={true}>
+	Video URL
+</Param>
+<Param name="hd_quality" type="boolean">
+	Video quality
+</Param>
+<Param name="island_id" type="number">
+	Video Island ID
+</Param>
+<Param name="province_id" type="number">
+	Video Province ID
+</Param>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+	"message": "Success add video"
+}
+```
+
+**Response :** <BadgeOutline variant="info">422 - Unprocessable Content</BadgeOutline>
+
+```json
+{
+	"error": [
+		{
+			"code": "too_small",
+			"minimum": 1,
+			"type": "string",
+			"inclusive": true,
+			"exact": false,
+			"message": "Title is required",
+			"path": ["title"]
+		},
+		{
+			"code": "too_small",
+			"minimum": 1,
+			"type": "string",
+			"inclusive": true,
+			"exact": false,
+			"message": "Video URL is required",
+			"path": ["video_url"]
+		}
+	]
+}
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

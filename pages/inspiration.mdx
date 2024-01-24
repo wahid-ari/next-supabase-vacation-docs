@@ -1,0 +1,21 @@
+import ApiPlayground from "@/components/ApiPlayground";
+import Param from "@/components/Param";
+
+# Ispiration API Playground
+
+The API playground is an interactive environment to make requests and preview an API endpoint.
+
+### All Ispiration
+
+<ApiPlayground method="GET" endpoint="inspiration">
+	Tes endpoint `Ispiration`
+</ApiPlayground>
+
+### Single Ispiration by ID
+
+<ApiPlayground method="GET" endpoint="inspiration" param={true} paramName="id">
+	Tes endpoint `inspiration` with `id` as param
+	<Param name="id" type="number">
+		Ispiration ID
+	</Param>
+</ApiPlayground>
