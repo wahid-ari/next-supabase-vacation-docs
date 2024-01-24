@@ -79,7 +79,7 @@ const config = {
   docsRepositoryBase: 'https://github.com/wahid-ari/next-supabase-vacation-docs/tree/master/',
   banner: {
     key: 'banner',
-    text: <a href={`${process.env.BASE_URL}/blog/MyVacation`}>🎉 MyVacation 1.0 is released. Read more →</a>,
+    text: <a href={`${process.env.BASE_URL}/blog/myvacation`}>🎉 MyVacation 1.0 is released. Read more →</a>,
   },
   editLink: {
     text: 'Edit this page on GitHub →',
