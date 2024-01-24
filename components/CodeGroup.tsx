@@ -7,7 +7,7 @@ import { AnimateSharedLayout, motion } from 'framer-motion';
 export default function CodeGroup({ items, children }: { items: string[]; children: ReactNode }) {
   return (
     <Tab.Group as='div' className='req-res my-4'>
-      <Tab.List className='relative flex items-center overflow-auto rounded-t bg-orange-100/70 dark:bg-neutral-800/75'>
+      <Tab.List className='relative flex items-center overflow-auto rounded-t bg-sky-100/70 dark:bg-neutral-800/75'>
         <AnimateSharedLayout>
           {items.map((item, index) => (
             <Tab
@@ -28,7 +28,7 @@ export default function CodeGroup({ items, children }: { items: string[]; childr
                   {item}
                   {selected && (
                     <motion.div
-                      className='absolute bottom-0 left-0 right-0 z-10 h-[2px] rounded-full border-b-2 border-b-orange-500'
+                      className='absolute bottom-0 left-0 right-0 z-10 h-[2px] rounded-full border-b-2 border-b-sky-500'
                       layoutId='underline'
                       initial={false}
                     />
