@@ -1,0 +1,65 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get Detail Island
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/island?id=(id)</Badge>
+
+**URL :** <Badge variant="dark">/api/island?slug=(slug)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+    "id": 1,
+    "name": "Jawa",
+    "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/Java.jpg",
+    "created_at": "2023-10-23T11:57:08.13947+00:00",
+    "slug": "jawa",
+    "destinations": [
+        {
+            "id": 19,
+            "name": "Cirebon",
+            "slug": "cirebon",
+            "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/cirebonthumb.jpg",
+            "description": "Explore Cirebon's unique blend of Sundanese, Javanese, Chinese, Indian, Arab, and European cultures. A rich tapestry of heritage awaits",
+            "location": "Cirebon, Jawa Barat",
+            "vacation_province": {
+                "id": 10,
+                "name": "Jawa Barat",
+                "slug": "jawa-barat"
+            }
+        },
+        {
+            "id": 20,
+            "name": "Bogor",
+            "slug": "bogor",
+            "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/bogorthumb.jpg",
+            "description": "Explore Bogor's pleasant climate and famous attractions, including the Indonesian Agricultural Institute and the Zoological Museum",
+            "location": "Bogor, Jawa Barat",
+            "vacation_province": {
+                "id": 10,
+                "name": "Jawa Barat",
+                "slug": "jawa-barat"
+            }
+        }
+    ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

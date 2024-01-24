@@ -2,36 +2,40 @@ import Badge from '@/components/Badge';
 import BadgeOutline from '@/components/BadgeOutline';
 import Param from '@/components/Param';
 
-# Create Category
+# Update Island
 
-To create the data in the specified collection with the specified parameters.
+To edit the data in the specified collection with the specified parameters.
 When a JSON object is saved, the object properties are automatically added to the collection you specified.
 
-**Method :** <Badge>POST</Badge>
+**Method :** <Badge variant="info">PUT</Badge>
 
-**URL :** <Badge variant="dark">/api/category</Badge>
+**URL :** <Badge variant="dark">/api/island</Badge>
 
 **Body :** <Badge variant="purple">JSON</Badge>
 
 ```json
 {
-	"name": "New Category",
-	"image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500"
+  "id": 1,
+  "name": "Edit Island",
+  "image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500"
 }
 ```
 
+<Param name='id' type='number' required={true}>
+  Island ID.
+</Param>
 <Param name='name' type='string' required={true}>
-    Category name.
+  Island name.
 </Param>
 <Param name="image_url" type="string" required={true}>
-    Category image URL
+	Island image URL
 </Param>
 
 **Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
 
 ```json
 {
-  "message": "Success add category"
+  "message": "Success update island"
 }
 ```
 
@@ -64,6 +68,12 @@ When a JSON object is saved, the object properties are automatically added to th
         }
     ]
 }
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
 ```
 
 **Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>

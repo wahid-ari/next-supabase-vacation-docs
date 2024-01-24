@@ -1,0 +1,68 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get All Island
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/island</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+[
+    {
+        "id": 1,
+        "name": "Jawa",
+        "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/Java.jpg",
+        "created_at": "2023-10-23T11:57:08.13947+00:00",
+        "slug": "jawa",
+        "vacation_destination": [
+            {
+                "id": 19,
+                "name": "Cirebon",
+                "slug": "cirebon"
+            },
+            {
+                "id": 20,
+                "name": "Bogor",
+                "slug": "bogor"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Bali",
+        "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/Bali.jpg",
+        "created_at": "2023-10-23T11:57:08.13947+00:00",
+        "slug": "bali",
+        "vacation_destination": [
+            {
+                "id": 1,
+                "name": "Kintamani: Bali's Scenic Gem",
+                "slug": "kintamani-balis-scenic-gem"
+            },
+            {
+                "id": 2,
+                "name": "Bali",
+                "slug": "bali"
+            }
+        ]
+    }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

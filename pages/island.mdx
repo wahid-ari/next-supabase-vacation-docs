@@ -1,0 +1,39 @@
+import ApiPlayground from "@/components/ApiPlayground";
+import Param from "@/components/Param";
+
+# Island API Playground
+
+The API playground is an interactive environment to make requests and preview an API endpoint.
+
+### All Island
+
+<ApiPlayground method="GET" endpoint="island">
+	Tes endpoint `Island`
+</ApiPlayground>
+
+### Single Island by ID
+
+<ApiPlayground method="GET" endpoint="island" param={true} paramName="id">
+	Tes endpoint `island` with `id` as param
+	<Param name="id" type="number">
+		Island ID
+	</Param>
+</ApiPlayground>
+
+### Single Island by SLUG
+
+<ApiPlayground method="GET" endpoint="island" param={true} paramName="slug">
+	Tes endpoint `island` with `slug` as param
+	<Param name="slug" type="string">
+		Island SLUG
+	</Param>
+</ApiPlayground>
+
+### Detail Destination SEO
+
+<ApiPlayground method='GET' endpoint='island?seo=true' param={true} paramName='slug'>
+  Tes endpoint `island` with `slug` and `seo=true` as param
+  <Param name='slug' type='string'>
+    island SLUG
+  </Param>
+</ApiPlayground>
