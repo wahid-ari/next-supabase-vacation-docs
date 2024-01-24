@@ -1,0 +1,39 @@
+import ApiPlayground from "@/components/ApiPlayground";
+import Param from "@/components/Param";
+
+# Province API Playground
+
+The API playground is an interactive environment to make requests and preview an API endpoint.
+
+### All Province
+
+<ApiPlayground method="GET" endpoint="province">
+	Tes endpoint `Province`
+</ApiPlayground>
+
+### Single Province by ID
+
+<ApiPlayground method="GET" endpoint="province" param={true} paramName="id">
+	Tes endpoint `province` with `id` as param
+	<Param name="id" type="number">
+		Province ID
+	</Param>
+</ApiPlayground>
+
+### Single Province by SLUG
+
+<ApiPlayground method="GET" endpoint="province" param={true} paramName="slug">
+	Tes endpoint `province` with `slug` as param
+	<Param name="slug" type="string">
+		Province SLUG
+	</Param>
+</ApiPlayground>
+
+### Detail Destination SEO
+
+<ApiPlayground method='GET' endpoint='province?seo=true' param={true} paramName='slug'>
+  Tes endpoint `province` with `slug` and `seo=true` as param
+  <Param name='slug' type='string'>
+    province SLUG
+  </Param>
+</ApiPlayground>

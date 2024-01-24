@@ -1,0 +1,76 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get All Province
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/province</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+[
+    {
+        "id": 1,
+        "slug": "aceh",
+        "name": "Aceh",
+        "image_url": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTq1-lW7jiqnw0ZB2UJcXaqjQnQf0BPh4LfEgKSd4UpMfBi5xqTu7ZdCkt1D_HdSbMWAdPendbEnplUcFq9spP2cvSaAr6O",
+        "vacation_island": {
+            "id": 6,
+            "name": "Sumatera",
+            "slug": "sumatera"
+        },
+        "vacation_destination": [
+            {
+                "id": 80,
+                "name": "Banda Aceh",
+                "slug": "banda-aceh"
+            },
+            {
+                "id": 98,
+                "name": "Takengon",
+                "slug": "takengon"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "slug": "sumatera-utara",
+        "name": "Sumatera Utara",
+        "image_url": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRdiazUG7cOjE3ZQGJ0UArUaXOze5KbHJzeEtO-rpumbV7dxZxatAnpD_PwtaD0GCELuOyu_6MU_uJZuFlW6UjyLnVjMcQC",
+        "vacation_island": {
+            "id": 6,
+            "name": "Sumatera",
+            "slug": "sumatera"
+        },
+        "vacation_destination": [
+            {
+                "id": 84,
+                "name": "Berastagi",
+                "slug": "berastagi"
+            },
+            {
+                "id": 93,
+                "name": "Tanjung Balai Karimun",
+                "slug": "tanjung-balai-karimun"
+            }
+        ]
+    }
+]
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

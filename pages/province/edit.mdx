@@ -1,37 +1,45 @@
-import Badge from '@/components/Badge';
-import BadgeOutline from '@/components/BadgeOutline';
-import Param from '@/components/Param';
+import Badge from "@/components/Badge";
+import BadgeOutline from "@/components/BadgeOutline";
+import Param from "@/components/Param";
 
-# Create Island
+# Update Province
 
-To create the data in the specified collection with the specified parameters.
+To edit the data in the specified collection with the specified parameters.
 When a JSON object is saved, the object properties are automatically added to the collection you specified.
 
-**Method :** <Badge>POST</Badge>
+**Method :** <Badge variant="info">PUT</Badge>
 
-**URL :** <Badge variant="dark">/api/island</Badge>
+**URL :** <Badge variant="dark">/api/province</Badge>
 
 **Body :** <Badge variant="purple">JSON</Badge>
 
 ```json
 {
-	"name": "New Island",
-	"image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500"
+	"id": 31,
+	"name": "New Province Edit",
+	"image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500",
+	"island_id": 1
 }
 ```
 
-<Param name='name' type='string' required={true}>
-    Island name.
+<Param name="id" type="number" required={true}>
+	ID of province.
+</Param>
+<Param name="name" type="string" required={true}>
+	Name of province.
 </Param>
 <Param name="image_url" type="string" required={true}>
-    Island image URL
+	Province image URL
+</Param>
+<Param name="island_id" type="number">
+	Province island ID
 </Param>
 
 **Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
 
 ```json
 {
-  "message": "Success add island"
+	"message": "Success update province"
 }
 ```
 
@@ -64,6 +72,12 @@ When a JSON object is saved, the object properties are automatically added to th
         }
     ]
 }
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
 ```
 
 **Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>

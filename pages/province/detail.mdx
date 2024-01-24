@@ -1,0 +1,61 @@
+import Badge from '@/components/Badge';
+import BadgeOutline from '@/components/BadgeOutline';
+
+# Get Detail Province
+
+To get the data in the specified collection. If no parameters are passed, it lists all of them.
+Otherwise, it lists the documents in the collection matching the specified parameters:
+
+**Method :** <Badge variant="success">GET</Badge>
+
+**URL :** <Badge variant="dark">/api/province?id=(id)</Badge>
+
+**URL :** <Badge variant="dark">/api/province?slug=(slug)</Badge>
+
+**Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
+
+```json
+{
+    "id": 1,
+    "name": "Aceh",
+    "image_url": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTq1-lW7jiqnw0ZB2UJcXaqjQnQf0BPh4LfEgKSd4UpMfBi5xqTu7ZdCkt1D_HdSbMWAdPendbEnplUcFq9spP2cvSaAr6O",
+    "created_at": "2023-10-24T08:41:10.41019+00:00",
+    "island_id": 6,
+    "slug": "aceh",
+    "vacation_island": {
+        "id": 6,
+        "name": "Sumatera",
+        "slug": "sumatera"
+    },
+    "destinations": [
+        {
+            "id": 80,
+            "name": "Banda Aceh",
+            "slug": "banda-aceh",
+            "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/sumatra/Banda_Aceh.jpg",
+            "description": "Its auspicious position on the tip of the westernmost point of the Indonesian archipelago has made the town of Banda Aceh a recognized transit point as well as a hub for education, commerce, and government.",
+            "location": "Banda Aceh, Aceh"
+        },
+        {
+            "id": 98,
+            "name": "Takengon",
+            "slug": "takengon",
+            "image_url": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/sumatra/Takengon.jpg",
+            "description": "Takengon is a 100 km town from the westernmost edge with population no more than 230,000. Takengon is the capital of Central Aceh district. It sits to offer you a handful of rareness you must see. The food is unique and it’s worth noting.",
+            "location": "Aceh Tengah, Aceh"
+        }
+    ]
+}
+```
+
+**Response :** <BadgeOutline variant="warning">404 - Not Found</BadgeOutline>
+
+```json
+Not Found
+```
+
+**Response :** <BadgeOutline variant="danger">500 - Server Error</BadgeOutline>
+
+```json
+Internal Server Error
+```

@@ -2,36 +2,40 @@ import Badge from '@/components/Badge';
 import BadgeOutline from '@/components/BadgeOutline';
 import Param from '@/components/Param';
 
-# Create Island
+# Create Province
 
 To create the data in the specified collection with the specified parameters.
 When a JSON object is saved, the object properties are automatically added to the collection you specified.
 
 **Method :** <Badge>POST</Badge>
 
-**URL :** <Badge variant="dark">/api/island</Badge>
+**URL :** <Badge variant="dark">/api/province</Badge>
 
 **Body :** <Badge variant="purple">JSON</Badge>
 
 ```json
 {
-	"name": "New Island",
-	"image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500"
+	"name": "New Province",
+	"image_url": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=60&w=500",
+	"island_id": 1
 }
 ```
 
 <Param name='name' type='string' required={true}>
-    Island name.
+    Province name.
 </Param>
 <Param name="image_url" type="string" required={true}>
-    Island image URL
+    Province image URL
+</Param>
+<Param name="island_id" type="number">
+    Province island ID
 </Param>
 
 **Response :** <BadgeOutline variant="success">200 - OK</BadgeOutline>
 
 ```json
 {
-  "message": "Success add island"
+  "message": "Success add province"
 }
 ```
 
